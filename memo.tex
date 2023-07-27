@@ -496,6 +496,54 @@
             となる。$\hat{\boldsymbol{x}'}$と$\hat{\boldsymbol{y}'}$のなす角は、120°だから(111)面に射影すると120°ずつ分布し、三角格子となる。
           \end{proof}
       \end{itemize}
+      \item $y$方向に有限の幅($0.4a$)を持つ帯を伝搬する電磁波を考える。$xy$平面上を伝搬するTMモードを考える。つまり、$k_z = 0であり、 E_z$成分のみを持つ。
+        この時、成立する条件として、$\nabla \cdot \mathbf{H}=0$が成立する。また、帯の外で$y$方向の波は指数関数的に減衰していく。
+
+        この時、磁場は波数に垂直な方向を向いた磁場の平面波の重ね合わせで書く必要がある。よって、以下のように書ける。
+        \begin{align*}
+          \mathbf{H}_1 &= e^{i(k_x x + k_y y)}(H_x \hat{\boldsymbol{x}} + H_y \hat{\boldsymbol{y}}) \\
+          \mathbf{H}_2 &= e^{i(k_x x - k_y y)}(H_x' \hat{\boldsymbol{x}} - H_y' \hat{\boldsymbol{y}}) 
+        \end{align*}
+        条件$\nabla \cdot \mathbf{H}=0$を以上の2つの式に適用することで、以下の2つが得られる。
+        \begin{align*}
+          k_x H_x + k_y H_y &= 0 \quad \cdots (1) \\
+          k_x H_x' - k_y H_y' &= 0 \quad \cdots (2)
+        \end{align*}
+        帯内の磁場は$\mathbf{H}_1$と$\mathbf{H}_2$の線形結合で書けるので、
+        \begin{align*}
+          \mathbf{H} = \alpha \mathbf{H}_1 + \beta \mathbf{H}_2 = e^{ik_x x} \left\{ (\alpha e^{ik_y y} H_x + \beta e^{- i k_y y} H_x' ) \hat{\boldsymbol{x}}  + (\alpha e^{ik_y y} H_y + \beta e^{- i k_y y} H_y' ) \hat{\boldsymbol{y}}\right\}
+        \end{align*}
+        $y$依存性は、システムの依存性からsinもしくは、cosの形で掛ける必要がある。よって、$\alpha H_x$などは任意の値を取ることができない。
+
+        $\alpha H_x = \beta H_x'$が成立する時、$x$成分はcosでかけて、$y$成分はsinでかけることができる。よって、これを適用すると
+        \begin{align*}
+          \mathbf{H} = e^{i k_x x} \left\{ 2 \alpha H_x \cos \left( k_y y \right) \hat{\boldsymbol{x}} + 2 i \alpha H_y \sin \left( k_y y \right) \hat{\boldsymbol{y}} \right\}
+        \end{align*}
+        となる。
+
+        次に、帯の外側を考える。はじめに帯を上側を考える。$y$は指数関数的に減衰するため、減衰定数を$\kappa$とすると、
+        \begin{align*}
+          \mathbf{H} = e^{i k_x x - \kappa y}\left( H_x'' \hat{\boldsymbol{x}} + H_y'' \hat{\boldsymbol{y}} \right)
+        \end{align*}
+        と書ける。$y$方向への対称性（偶関数か奇関数か）で$\kappa$の符号が入れ替わる。条件$\nabla \cdot \mathbf{H}$を考えると、
+        \begin{align*}
+          i k_x H_x'' - \kappa H_y'' = 0 \quad \cdots (3) \\
+        \end{align*}
+        となる。次に磁場の接続を考える。帯の$y$方向の幅を$w$として、中心が$y = 0$にあるとする。つまり、$y = \pm w / 2$で磁場が連続であるときの場合を考える。
+        $y = w / 2$のとき、$x成分とy$成分それぞれについて考えると、
+        \begin{align*}
+          2 \alpha \cos \left( k_y \frac{w}{2} \right)H_x &= e^{- \kappa \frac{w}{2}} H_x'' \quad \cdots (4) \\
+          2 \alpha i \sin \left( k_y \frac{w}{2} \right)H_y &= e^{- \kappa \frac{w}{2}} H_y'' \quad \cdots (5)
+        \end{align*}
+        $(5)/(4)$をして整理をすると、
+        \begin{align*}
+          \kappa = - k_y \cot \left( k_y \frac{w}{2} \right)
+        \end{align*}
+        $(4)/(5)$をして整理をすると、
+        \begin{align*}
+          \kappa = k_y \tan \left( k_y \frac{w}{2} \right)
+        \end{align*}
+
     \end{enumerate}
     
 \end{document}
