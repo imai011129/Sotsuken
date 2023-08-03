@@ -543,7 +543,16 @@
         \begin{align*}
           \kappa = k_y \tan \left( k_y \frac{w}{2} \right)
         \end{align*}
-
+        分散関係より、以下の等式が成立する
+        \begin{gather*}
+          \left( \frac{\omega}{c} \right)^2 \epsilon = k_x^2 + \kappa^2
+          \\
+          \Longleftrightarrow  \kappa = \sqrt{\left( \frac{\omega}{c} \right)^2 \epsilon - k_x^2} = \sqrt{\left( k_x^2 + k_y^2 \right) \epsilon - k_x^2} = \sqrt{k_y^2 \epsilon + k_x^2 \left( \epsilon - 1 \right)}
+        \end{gather*}
+        これを先の式に代入をして
+        \begin{align*}
+          k_y \tan \left( k_y \frac{w}{2} \right) = \sqrt{k_y^2 \epsilon + k_x^2 \left( \epsilon - 1 \right)}
+        \end{align*}
     \end{enumerate}
     
 \end{document}
