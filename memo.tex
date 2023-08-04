@@ -545,14 +545,16 @@
         \end{align*}
         分散関係より、以下の等式が成立する
         \begin{gather*}
-          \left( \frac{\omega}{c} \right)^2 \epsilon = k_x^2 + \kappa^2
+          \left( \frac{\omega}{c} \right)^2 = k_x^2 - \kappa^2
           \\
-          \Longleftrightarrow  \kappa = \sqrt{\left( \frac{\omega}{c} \right)^2 \epsilon - k_x^2} = \sqrt{\left( k_x^2 + k_y^2 \right) \epsilon - k_x^2} = \sqrt{k_y^2 \epsilon + k_x^2 \left( \epsilon - 1 \right)}
+          \Longleftrightarrow  
+          \kappa = \sqrt{k_x^2 - \left( \frac{\omega}{c} \right)^2} = \sqrt{k_x^2 - \frac{1}{\epsilon}(k_x^2 + k_y^2)} = \sqrt{\left( 1 - \frac{1}{\epsilon} \right) k_x^2 - \frac{k_y^2}{\epsilon}}
         \end{gather*}
         これを先の式に代入をして
         \begin{align*}
-          k_y \tan \left( k_y \frac{w}{2} \right) = \sqrt{k_y^2 \epsilon + k_x^2 \left( \epsilon - 1 \right)}
+          k_y \tan \left( k_y \frac{w}{2} \right) = \sqrt{\left( 1 - \frac{1}{\epsilon} \right) k_x^2 - \frac{k_y^2}{\epsilon}}
         \end{align*}
+        この式の$k_y$を変数としてグラフの交点から該当する$k_x$を求めることができる。
     \end{enumerate}
     
 \end{document}
