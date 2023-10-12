@@ -297,264 +297,311 @@
   
   
   $0 \leq z \leq b$のときに屈折率$\epsilon_1$、$b \leq z \leq a$のときに屈折率$\epsilon_2$で周期$a$で繰り返される結晶を考える。このとき、$\mathbf{u} (z) = \mathbf{u} (z + R)$（$R$は$a$の整数倍）が成立する。（＊）に代入すると、$k_y = 0$だから、
+  \begin{align*}
+    (＊) &\Longleftrightarrow - \frac{d}{dz}\left( \frac{1}{\epsilon(z)} \frac{d\phi}{dz} \right) = \left( \frac{\omega}{c} \right)^2 \phi(z)
+    \\
+    \phi (z) &= 
+    \begin{cases}
+      \phi_1 = A e^{ik_1 z} + B e^{- i k_1 z} \quad \left( 0 \leq z \leq b \right) \\
+      \phi_2 = C e^{ik_2 z} + D e^{- i k_2 z} \quad \left( b \leq z \leq a \right)
+    \end{cases}
+  \end{align*}
+
+  となる。接続条件を考えると
+
+  \begin{align*}
+    & A e^{i k_1 b} + B e^{- i k_1 b} = C e^{i k_2 b} + D e^{- i k_2 b}
+    \\
+    & \frac{A k_1}{\epsilon_1} e^{i k_1 b} - \frac{B k_1}{\epsilon_1} e^{- i k_1 b} = \frac{C k_2}{\epsilon_2} e^{i k_2 b} - \frac{D k_2}{\epsilon_2}e^{- i k_2 b}
+  \end{align*}
+
+  となる。この2つの式から、$C, D$を$A, B$で表すと
+  \begin{align*}
+    C &= \frac{1}{2} \left\{ \left( \alpha + 1 \right) A e^{i \left( k_1 - k_2 \right) b } + \left( 1 - \alpha \right) B e^{- i \left( k_1 + k_2 \right) b } \right\} \\
+    D &= \frac{1}{2} \left\{ \left( \alpha - 1 \right) A e^{i \left( k_1 + k_2 \right) b} + \left( 1 + \alpha \right) B e^{- i (k_1 - k_2)b} \right\}
+  \end{align*}
+  となる。なお、ここで$\displaystyle \frac{k_1 \epsilon_1}{k_2 \epsilon_2} = \sqrt{\frac{\epsilon_2}{\epsilon_1}} = \alpha$とした。$\left( \displaystyle k_i = \sqrt{\epsilon_i} \frac{\omega}{c}  に注意 \right) $
+
+  次に、$z = a$の時を考える。このとき、$\phi(a) = e^{i k_z a} \phi (0)$である($k_z$はブロッホ波数)。接続条件は、
+  \begin{align*}
+    & e^{i k_z a} (A + B) = C e^{i k_2 a} + D e^{- i k_2 a} \\
+    & \alpha (A - B) e^{i k_z a} = C e^{i k_z a} - D e^{- i k_z a}
+  \end{align*}
+  以上の式を$C, D$を削除し、$A, B$に関する式にする。
+  \begin{align*}
+    (A + B) e^{i k_z a} = & \frac{1}{2} \left\{ \left( \alpha + 1 \right) A e^{i \left( k_1 - k_2 \right) b } + \left( 1 - \alpha \right) B e^{- i \left( k_1 + k_2 \right) b } \right\} e^{i k_2 a} 
+    \\ + & \frac{1}{2} \left\{ \left( \alpha - 1 \right) A e^{i \left( k_1 + k_2 \right) b} + \left( 1 + \alpha \right) B e^{- i (k_1 - k_2)b} \right\} e^{- i k_2 a} 
+  \end{align*}
+  \begin{align*}
+    \alpha (A - B) e^{i k_z a} = & \frac{1}{2} \left\{ \left( \alpha + 1 \right) A e^{i \left( k_1 - k_2 \right) b } + \left( 1 - \alpha \right) B e^{- i \left( k_1 + k_2 \right) b } \right\} e^{i k_2 a} 
+    \\ - & \frac{1}{2} \left\{ \left( \alpha - 1 \right) A e^{i \left( k_1 + k_2 \right) b} + \left( 1 + \alpha \right) B e^{- i (k_1 - k_2)b} \right\} e^{- i k_2 a}
+  \end{align*}
+  2つの式から行列式を求めると、
+  \begin{align*}
+    (1 + \alpha)^2 \left( e^{i (k_z - k_2)a} - e^{i(k_z - k_2)b} \right) \left( e^{i (k_z + k_2)a} - e^{- i(k_1 - k_2)b} \right) = 0
+  \end{align*}
+  展開し、両辺を$e^{i k_z a}$で割ると、
+  \begin{align*}
+    \cos k_z a &= \frac{1}{4 \alpha} \left\{ (1 + \alpha)^2 \cos \left( k_2 a + k_1 b - k_2 b \right) - (1 - \alpha)^2 \cos \left( k_2 a - k_1 b - k_2 \right) \right\} 
+    \\
+    &= \frac{1}{4 \alpha} (1 + \alpha^2) \left\{ \cos \left( k_2 a + k_1 b - k_2 b \right) - \cos \left( k_2 a - k_1 b - k_2 b \right) \right\} 
+    \\
+    &\quad + \frac{1}{2} \left\{ \cos \left( k_2 a + k_1 b - k_2 b \right) + \cos \left( k_2 a - k_1 b - k_2 b \right) \right\} 
+    \\
+    &= \frac{1 + \alpha^2}{4 \alpha} \left[ -2 \sin \left\{ k_2 \left( a - b \right) \right\} \sin k_1 b \right] + \frac{1}{2} \left[ 2 \cos \left\{ k_2 \left( a - b \right) \right\} \cos k_1 b \right]
+    \\
+    &= - \frac{1}{2} \left( \alpha + \frac{1}{\alpha} \right) \sin \left\{ k_2 \left( a - b \right) \right\} \sin (k_1 b) + \cos \left\{ k_2 \left( a - b \right) \right\} \cos (k_1 b)
+  \end{align*}
+  ここで、$a - b, b$は結晶の厚さを表しており、それぞれの領域における波数$k$と対応している。$\alpha \neq 1$では$| \cos k_z a | > 1$となり、バンドギャップが生成される。
+
+  $b = 0.5a$とし、分散関係を用いて式を整理すると
+  \begin{align*}
+    - \frac{1}{2} \left( \alpha + \frac{1}{\alpha} \right) \sin \left( \sqrt{\epsilon_2} \frac{\omega a}{2 c} \right)\sin \left( \sqrt{\epsilon_1} \frac{\omega a}{2 c} \right) + \cos \left( \sqrt{\epsilon_2} \frac{\omega a}{2 c} \right)\cos \left( \sqrt{\epsilon_1} \frac{\omega a}{2 c} \right)
+  \end{align*}
+  $\displaystyle \frac{\omega a}{2 \pi c} = x$とすると、
+  \begin{align*}
+    - \frac{1}{2} \left( \alpha + \frac{1}{\alpha} \right) \sin \left( \sqrt{\epsilon_2} \pi x \right)\sin \left( \sqrt{\epsilon_1} \pi x \right) + \cos \left( \sqrt{\epsilon_2} \pi x \right)\cos \left( \sqrt{\epsilon_1} \pi x \right)
+  \end{align*}
+  この式が$-1$となるときにバンドギャップを与える。そこからミッドギャップ周波数が決まる。
+  \item 教科書第4章式(2)の導出
+  \begin{align*}
+    \frac{\Delta \omega}{\omega_m} \thickapprox \frac{\Delta \epsilon}{\epsilon} \frac{\sin \pi d / a}{\pi}
+  \end{align*}
+  \begin{proof}[導出]
+    条件として、$\displaystyle \frac{\Delta \epsilon}{\epsilon} \ll 1$もしくは $\displaystyle \frac{d}{a}$が十分に小さいがある。 
+  \end{proof}
+  \item 以下の2つの項目に関して説明せよ
+  \begin{itemize}
+    \item[(1).] 導波管を伝わるモードはどのようにして記述できるか
+    \item[(2).] 長方形の横を取っ払って金属でサンドイッチされた状態でカットオフ周波数が生じない理由（電場接線方向を向いているか垂直を向いてるか）
+  \end{itemize}
+  \textbf{説明}
+  \\
+  TEモード、TMモードはそれぞれ以下のように説明される
+    \begin{itemize}
+      \item[-] TE(Transverse Electric)モード：\textcolor{red}{電場}が導波管の伝搬方向に垂直
+      \item[-] TM(Transverse Magnetic)モード：\textcolor{red}{磁場}が導波管の伝搬方向に垂直
+    \end{itemize}
+  \begin{itemize}
+    \item[(1).] 波が$z$方向に伝搬し、$x$方向の幅が$a$、$y$方向の幅が$b$の短形導波管を考える。このとき、カットオフ周波数$\omega_c$は以下のようにして記述される。
     \begin{align*}
-      (＊) &\Longleftrightarrow - \frac{d}{dz}\left( \frac{1}{\epsilon(z)} \frac{d\phi}{dz} \right) = \left( \frac{\omega}{c} \right)^2 \phi(z)
-      \\
-      \phi (z) &= 
+      \omega_c = c \sqrt{\left( \frac{n \pi}{a} \right)^2 + \left( \frac{m \pi}{b} \right)^2} \quad （c:光速、 n: x方向の波の数、m:y方向の波の数）
+    \end{align*}
+    
+    \item[(2).] カットオフ周波数とは、\textbf{導波管で伝送することが可能な最低周波数}のこと（つまり最大波長）。
+    なので、長方形の横を取っ払って金属でサンドイッチされた状態でカットオフ周波数が生じないのは横方向への制限がなくなり、
+  \end{itemize}
+  \item fcc格子のブリルアンゾーンがなぜ教科書に掲載されているような形となっているのか説明せよ
+    \\ 
+    fcc格子の基本並進ベクトルは以下の3つである
+    \begin{align*}
+      \boldsymbol{a}_1 = \frac{a}{2}\begin{pmatrix} 1 \\ 1 \\ 0\end{pmatrix}, 
+      \boldsymbol{a}_2 = \frac{a}{2}\begin{pmatrix} 1 \\ 0 \\ 1\end{pmatrix}, 
+      \boldsymbol{a}_3 = \frac{a}{2}\begin{pmatrix} 0 \\ 1 \\ 1\end{pmatrix}
+    \end{align*}
+    したがって逆格子ベクトルを求めると、
+    \begin{align*}
+      \boldsymbol{b}_1 = \frac{2 \pi}{a} \begin{pmatrix}1 \\ 1 \\ -1\end{pmatrix}, 
+      \boldsymbol{b}_2 = \frac{2 \pi}{a} \begin{pmatrix}-1 \\ 1 \\ 1\end{pmatrix}, 
+      \boldsymbol{b}_3 = \frac{2 \pi}{a} \begin{pmatrix}1 \\ -1 \\ 1\end{pmatrix}
+    \end{align*}
+    となる。以上のことから逆格子ベクトル$\boldsymbol{G}$は整数$l, m, n$を用いて以下のように書くことができる。
+    \begin{align*}
+      \boldsymbol{G} = l \boldsymbol{b}_1 + m \boldsymbol{b}_2 + n \boldsymbol{b}_3
+    \end{align*}
+    逆格子ベクトルを図示してどれか1つの軸に沿って90°ずつ回転させると以下の8つの座標を得る
+    \begin{align*}
       \begin{cases}
-        \phi_1 = A e^{ik_1 z} + B e^{- i k_1 z} \quad \left( 0 \leq z \leq b \right) \\
-        \phi_2 = C e^{ik_2 z} + D e^{- i k_2 z} \quad \left( b \leq z \leq a \right)
+        (1, 1, -1) \quad (l = 1, m = n = 0) \\
+        (1, -1, -1) \quad (m = -1, l = n = 0) \\
+        (-1, -1, -1) \quad (l = m = n = -1) \\
+        (-1, 1, -1) \quad (n = -1, l = m = 0) \\
+        (1, 1, 1) \quad (l = m = n = 1) \\
+        (1, -1, 1) \quad (n = 1, l = m = 0) \\
+        (-1, 1, 1) \quad (m = 1, l = n = 0) \\
+        (-1, -1, 1) \quad (l = -1, m = n = 0) 
       \end{cases}
     \end{align*}
-
-    となる。接続条件を考えると
-
+    以上から最近接面を求めることができた。このときの原点からの距離は$\displaystyle \frac{2\pi}{a} \sqrt{3}$である。
+    
+    また、ブリルアンゾーンは$x, y, z$軸方向にも面を持っていることがわかる。よって、$(\pm 1, 0, 0), (0, \pm 1, 0), (0, 0, \pm 1)$となるような係数$l, m, n$を考えてみる。例として$(1, 0, 0)$の場合
     \begin{align*}
-      & A e^{i k_1 b} + B e^{- i k_1 b} = C e^{i k_2 b} + D e^{- i k_2 b}
-      \\
-      & \frac{A k_1}{\epsilon_1} e^{i k_1 b} - \frac{B k_1}{\epsilon_1} e^{- i k_1 b} = \frac{C k_2}{\epsilon_2} e^{i k_2 b} - \frac{D k_2}{\epsilon_2}e^{- i k_2 b}
+      l - m + n &= 1 \\
+      l + m - n &= 0 \\
+      -l + m + n &= 0 
     \end{align*}
-
-    となる。この2つの式から、$C, D$を$A, B$で表すと
-    \begin{align*}
-      C &= \frac{1}{2} \left\{ \left( \alpha + 1 \right) A e^{i \left( k_1 - k_2 \right) b } + \left( 1 - \alpha \right) B e^{- i \left( k_1 + k_2 \right) b } \right\} \\
-      D &= \frac{1}{2} \left\{ \left( \alpha - 1 \right) A e^{i \left( k_1 + k_2 \right) b} + \left( 1 + \alpha \right) B e^{- i (k_1 - k_2)b} \right\}
-    \end{align*}
-    となる。なお、ここで$\displaystyle \frac{k_1 \epsilon_1}{k_2 \epsilon_2} = \sqrt{\frac{\epsilon_2}{\epsilon_1}} = \alpha$とした。$\left( \displaystyle k_i = \sqrt{\epsilon_i} \frac{\omega}{c}  に注意 \right) $
-
-    次に、$z = a$の時を考える。このとき、$\phi(a) = e^{i k_z a} \phi (0)$である($k_z$はブロッホ波数)。接続条件は、
-    \begin{align*}
-      & e^{i k_z a} (A + B) = C e^{i k_2 a} + D e^{- i k_2 a} \\
-      & \alpha (A - B) e^{i k_z a} = C e^{i k_z a} - D e^{- i k_z a}
-    \end{align*}
-    以上の式を$C, D$を削除し、$A, B$に関する式にする。
-    \begin{align*}
-      (A + B) e^{i k_z a} = & \frac{1}{2} \left\{ \left( \alpha + 1 \right) A e^{i \left( k_1 - k_2 \right) b } + \left( 1 - \alpha \right) B e^{- i \left( k_1 + k_2 \right) b } \right\} e^{i k_2 a} 
-      \\ + & \frac{1}{2} \left\{ \left( \alpha - 1 \right) A e^{i \left( k_1 + k_2 \right) b} + \left( 1 + \alpha \right) B e^{- i (k_1 - k_2)b} \right\} e^{- i k_2 a} 
-    \end{align*}
-    \begin{align*}
-      \alpha (A - B) e^{i k_z a} = & \frac{1}{2} \left\{ \left( \alpha + 1 \right) A e^{i \left( k_1 - k_2 \right) b } + \left( 1 - \alpha \right) B e^{- i \left( k_1 + k_2 \right) b } \right\} e^{i k_2 a} 
-      \\ - & \frac{1}{2} \left\{ \left( \alpha - 1 \right) A e^{i \left( k_1 + k_2 \right) b} + \left( 1 + \alpha \right) B e^{- i (k_1 - k_2)b} \right\} e^{- i k_2 a}
-    \end{align*}
-    2つの式から行列式を求めると、
-    \begin{align*}
-      (1 + \alpha)^2 \left( e^{i (k_z - k_2)a} - e^{i(k_z - k_2)b} \right) \left( e^{i (k_z + k_2)a} - e^{- i(k_1 - k_2)b} \right) = 0
-    \end{align*}
-    展開し、両辺を$e^{i k_z a}$で割ると、
-    \begin{align*}
-      \cos k_z a &= \frac{1}{4 \alpha} \left\{ (1 + \alpha)^2 \cos \left( k_2 a + k_1 b - k_2 b \right) - (1 - \alpha)^2 \cos \left( k_2 a - k_1 b - k_2 \right) \right\} 
-      \\
-      &= \frac{1}{4 \alpha} (1 + \alpha^2) \left\{ \cos \left( k_2 a + k_1 b - k_2 b \right) - \cos \left( k_2 a - k_1 b - k_2 b \right) \right\} 
-      \\
-      &\quad + \frac{1}{2} \left\{ \cos \left( k_2 a + k_1 b - k_2 b \right) + \cos \left( k_2 a - k_1 b - k_2 b \right) \right\} 
-      \\
-      &= \frac{1 + \alpha^2}{4 \alpha} \left[ -2 \sin \left\{ k_2 \left( a - b \right) \right\} \sin k_1 b \right] + \frac{1}{2} \left[ 2 \cos \left\{ k_2 \left( a - b \right) \right\} \cos k_1 b \right]
-      \\
-      &= - \frac{1}{2} \left( \alpha + \frac{1}{\alpha} \right) \sin \left\{ k_2 \left( a - b \right) \right\} \sin (k_1 b) + \cos \left\{ k_2 \left( a - b \right) \right\} \cos (k_1 b)
-    \end{align*}
-    ここで、$a - b, b$は結晶の厚さを表しており、それぞれの領域における波数$k$と対応している。$\alpha \neq 1$では$| \cos k_z a | > 1$となり、バンドギャップが生成される。
-
-    $b = 0.5a$とし、分散関係を用いて式を整理すると
-    \begin{align*}
-      - \frac{1}{2} \left( \alpha + \frac{1}{\alpha} \right) \sin \left( \sqrt{\epsilon_2} \frac{\omega a}{2 c} \right)\sin \left( \sqrt{\epsilon_1} \frac{\omega a}{2 c} \right) + \cos \left( \sqrt{\epsilon_2} \frac{\omega a}{2 c} \right)\cos \left( \sqrt{\epsilon_1} \frac{\omega a}{2 c} \right)
-    \end{align*}
-    $\displaystyle \frac{\omega a}{2 \pi c} = x$とすると、
-    \begin{align*}
-      - \frac{1}{2} \left( \alpha + \frac{1}{\alpha} \right) \sin \left( \sqrt{\epsilon_2} \pi x \right)\sin \left( \sqrt{\epsilon_1} \pi x \right) + \cos \left( \sqrt{\epsilon_2} \pi x \right)\cos \left( \sqrt{\epsilon_1} \pi x \right)
-    \end{align*}
-    この式が$-1$となるときにバンドギャップを与える。そこからミッドギャップ周波数が決まる。
-    \item 教科書第4章式(2)の導出
-    \begin{align*}
-      \frac{\Delta \omega}{\omega_m} \thickapprox \frac{\Delta \epsilon}{\epsilon} \frac{\sin \pi d / a}{\pi}
-    \end{align*}
-    \begin{proof}[導出]
-      条件として、$\displaystyle \frac{\Delta \epsilon}{\epsilon} \ll 1$もしくは $\displaystyle \frac{d}{a}$が十分に小さいがある。 
-    \end{proof}
-    \item 以下の2つの項目に関して説明せよ
+    以上を解くと、$(l, m, n) = (1/2, 0, 1/2)$となる。$l, m, n$は整数であることからすべての式を2倍すれば良く、このときの原点からの距離は$\displaystyle \frac{4\pi}{a}$である。
+    以上のことからfcc格子のブリルアンゾーンは教科書に掲載されているような形となる。
+  \item ヤブロノバイトの棒がどうして教科書のような形になっているのか。
     \begin{itemize}
-      \item[(1).] 導波管を伝わるモードはどのようにして記述できるか
-      \item[(2).] 長方形の横を取っ払って金属でサンドイッチされた状態でカットオフ周波数が生じない理由（電場接線方向を向いているか垂直を向いてるか）
-    \end{itemize}
-    \textbf{説明}
-    \\
-    TEモード、TMモードはそれぞれ以下のように説明される
-      \begin{itemize}
-        \item[-] TE(Transverse Electric)モード：\textcolor{red}{電場}が導波管の伝搬方向に垂直
-        \item[-] TM(Transverse Magnetic)モード：\textcolor{red}{磁場}が導波管の伝搬方向に垂直
-      \end{itemize}
-    \begin{itemize}
-      \item[(1).] 波が$z$方向に伝搬し、$x$方向の幅が$a$、$y$方向の幅が$b$の短形導波管を考える。このとき、カットオフ周波数$\omega_c$は以下のようにして記述される。
-      \begin{align*}
-        \omega_c = c \sqrt{\left( \frac{n \pi}{a} \right)^2 + \left( \frac{m \pi}{b} \right)^2} \quad （c:光速、 n: x方向の波の数、m:y方向の波の数）
-      \end{align*}
+      \item (111)面の法線と棒のなす角が35.26degである理由
+      \begin{proof}
+        fcc格子の基本並進ベクトルは以下の3つである。
+        \begin{align*}
+          \boldsymbol{a}_1 = \frac{a}{2}\begin{pmatrix} 1 \\ 1 \\ 0\end{pmatrix}, 
+          \boldsymbol{a}_2 = \frac{a}{2}\begin{pmatrix} 1 \\ 0 \\ 1\end{pmatrix}, 
+          \boldsymbol{a}_3 = \frac{a}{2}\begin{pmatrix} 0 \\ 1 \\ 1\end{pmatrix}
+        \end{align*}
+        また面(111)の法線ベクトルは、$\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix}$なので、2つのベクトルのなす角はそれぞれのベクトルの大きさと内積からもとめる事ができる。1例として、$\displaystyle \frac{a}{2}\begin{pmatrix} 1 \\ 1 \\ 0\end{pmatrix}$とのなす角について述べる。なす角を$\theta$とすると、
+        \begin{align*}
+          \cos \theta = \frac{ \boldsymbol{a \cdot b} }{| \boldsymbol{a} | | \boldsymbol{b} |} = \cfrac{a}{\cfrac{a}{\sqrt{2}} \sqrt{3}} = \sqrt{\frac{2}{3}} \quad \therefore \theta \simeq 35.26 \mathrm{deg}
+        \end{align*}
+        となることがわかる。
+      \end{proof}
+  \item なぜ棒が120°ずつ分布しているのか
+    \begin{proof}
+      これは言い換えると、3つの基本並進ベクトルを(111)面に射影したもののなす角が120°になる理由を答えよということ。
       
-      \item[(2).] カットオフ周波数とは、\textbf{導波管で伝送することが可能な最低周波数}のこと（つまり最大波長）。
-      なので、長方形の横を取っ払って金属でサンドイッチされた状態でカットオフ周波数が生じないのは横方向への制限がなくなり、
-    \end{itemize}
-    \item fcc格子のブリルアンゾーンがなぜ教科書に掲載されているような形となっているのか説明せよ
-      \\ 
-      fcc格子の基本並進ベクトルは以下の3つである
+      並進ベクトルは整数$l, m, n$を用いることで以下のようにして書くことができる。
       \begin{align*}
-        \boldsymbol{a}_1 = \frac{a}{2}\begin{pmatrix} 1 \\ 1 \\ 0\end{pmatrix}, 
-        \boldsymbol{a}_2 = \frac{a}{2}\begin{pmatrix} 1 \\ 0 \\ 1\end{pmatrix}, 
-        \boldsymbol{a}_3 = \frac{a}{2}\begin{pmatrix} 0 \\ 1 \\ 1\end{pmatrix}
+        \boldsymbol{R} = l \boldsymbol{a_1} + m \boldsymbol{a_2} + n \boldsymbol{a_3} = \frac{1}{2}
+        \begin{pmatrix}
+          l + n \\
+          l + m \\
+          m + n
+        \end{pmatrix}
       \end{align*}
-      したがって逆格子ベクトルを求めると、
+      このとき、$R$を(111)面の法線ベクトルと平行な成分と垂直な成分に分けて書きたい。
+
+      よって、$\boldsymbol{R} = \boldsymbol{R}_{\parallel} + \boldsymbol{R}_{\perp}$のようにしてそれぞれの成分に分ける。また、法線ベクトルを規格化したものとして$\boldsymbol{n} = 1 / \sqrt{3} (1, 1, 1)$を定義する。このとき、$\boldsymbol{R}_{\parallel}$は$\boldsymbol{n}$と平行なので実数$\alpha$を用いて$\boldsymbol{R}_{\parallel} = \alpha \boldsymbol{n}$と書けることがわかる。
+
+      以下で$\alpha$を求めていく。
+      \begin{gather*}
+        \boldsymbol{R}_{\parallel} = \alpha \boldsymbol{n} \\
+        \boldsymbol{n} \cdot \boldsymbol{R}_{\parallel} = \alpha \boldsymbol{n} \cdot \boldsymbol{n} = \alpha |\boldsymbol{n}|^2  \\
+        \boldsymbol{n} \cdot \boldsymbol{R} = \alpha \quad ( \because |\boldsymbol{n}| = 1 )
+      \end{gather*}
+      最終行において、$\boldsymbol{n} \cdot \boldsymbol{R}_{\parallel} = \boldsymbol{n} \cdot \boldsymbol{R}$としたのは、$\boldsymbol{R}$を$\boldsymbol{n}$と平行成分と垂直成分に分けて、垂直なベクトルの内積が0となる性質を用いた。
+
+      計算を実施して、
       \begin{align*}
-        \boldsymbol{b}_1 = \frac{2 \pi}{a} \begin{pmatrix}1 \\ 1 \\ -1\end{pmatrix}, 
-        \boldsymbol{b}_2 = \frac{2 \pi}{a} \begin{pmatrix}-1 \\ 1 \\ 1\end{pmatrix}, 
-        \boldsymbol{b}_3 = \frac{2 \pi}{a} \begin{pmatrix}1 \\ -1 \\ 1\end{pmatrix}
+        \alpha = 
+          \frac{1}{\sqrt{3}} \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} 
+          \cdot \frac{1}{2} \begin{pmatrix} l + n \\ l + m \\ m + n \end{pmatrix}
+          = \frac{1}{2 \sqrt{3}} \left( l + m + n \right)
       \end{align*}
-      となる。以上のことから逆格子ベクトル$\boldsymbol{G}$は整数$l, m, n$を用いて以下のように書くことができる。
+      $\alpha$を求めることができたので法線ベクトルに垂直な成分を求めていく。
       \begin{align*}
-        \boldsymbol{G} = l \boldsymbol{b}_1 + m \boldsymbol{b}_2 + n \boldsymbol{b}_3
-      \end{align*}
-      逆格子ベクトルを図示してどれか1つの軸に沿って90°ずつ回転させると以下の8つの座標を得る
-      \begin{align*}
-        \begin{cases}
-          (1, 1, -1) \quad (l = 1, m = n = 0) \\
-          (1, -1, -1) \quad (m = -1, l = n = 0) \\
-          (-1, -1, -1) \quad (l = m = n = -1) \\
-          (-1, 1, -1) \quad (n = -1, l = m = 0) \\
-          (1, 1, 1) \quad (l = m = n = 1) \\
-          (1, -1, 1) \quad (n = 1, l = m = 0) \\
-          (-1, 1, 1) \quad (m = 1, l = n = 0) \\
-          (-1, -1, 1) \quad (l = -1, m = n = 0) 
-        \end{cases}
-      \end{align*}
-      以上から最近接面を求めることができた。このときの原点からの距離は$\displaystyle \frac{2\pi}{a} \sqrt{3}$である。
-      
-      また、ブリルアンゾーンは$x, y, z$軸方向にも面を持っていることがわかる。よって、$(\pm 1, 0, 0), (0, \pm 1, 0), (0, 0, \pm 1)$となるような係数$l, m, n$を考えてみる。例として$(1, 0, 0)$の場合
-      \begin{align*}
-        l - m + n &= 1 \\
-        l + m - n &= 0 \\
-        -l + m + n &= 0 
-      \end{align*}
-      以上を解くと、$(l, m, n) = (1/2, 0, 1/2)$となる。$l, m, n$は整数であることからすべての式を2倍すれば良く、このときの原点からの距離は$\displaystyle \frac{4\pi}{a}$である。
-      以上のことからfcc格子のブリルアンゾーンは教科書に掲載されているような形となる。
-    \item ヤブロノバイトの棒がどうして教科書のような形になっているのか。
-      \begin{itemize}
-        \item (111)面の法線と棒のなす角が35.26degである理由
-        \begin{proof}
-          fcc格子の基本並進ベクトルは以下の3つである。
-          \begin{align*}
-            \boldsymbol{a}_1 = \frac{a}{2}\begin{pmatrix} 1 \\ 1 \\ 0\end{pmatrix}, 
-            \boldsymbol{a}_2 = \frac{a}{2}\begin{pmatrix} 1 \\ 0 \\ 1\end{pmatrix}, 
-            \boldsymbol{a}_3 = \frac{a}{2}\begin{pmatrix} 0 \\ 1 \\ 1\end{pmatrix}
-          \end{align*}
-          また面(111)の法線ベクトルは、$\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix}$なので、2つのベクトルのなす角はそれぞれのベクトルの大きさと内積からもとめる事ができる。1例として、$\displaystyle \frac{a}{2}\begin{pmatrix} 1 \\ 1 \\ 0\end{pmatrix}$とのなす角について述べる。なす角を$\theta$とすると、
-          \begin{align*}
-            \cos \theta = \frac{ \boldsymbol{a \cdot b} }{| \boldsymbol{a} | | \boldsymbol{b} |} = \cfrac{a}{\cfrac{a}{\sqrt{2}} \sqrt{3}} = \sqrt{\frac{2}{3}} \quad \therefore \theta \simeq 35.26 \mathrm{deg}
-          \end{align*}
-          となることがわかる。
-        \end{proof}
-        \item なぜ棒が120°ずつ分布しているのか
-          \begin{proof}
-            これは言い換えると、3つの基本並進ベクトルを(111)面に射影したもののなす角が120°になる理由を答えよということ。
-            
-            並進ベクトルは整数$l, m, n$を用いることで以下のようにして書くことができる。
-            \begin{align*}
-              \boldsymbol{R} = l \boldsymbol{a_1} + m \boldsymbol{a_2} + n \boldsymbol{a_3} = \frac{1}{2}
-              \begin{pmatrix}
-                l + n \\
-                l + m \\
-                m + n
-              \end{pmatrix}
-            \end{align*}
-            このとき、$R$を(111)面の法線ベクトルと平行な成分と垂直な成分に分けて書きたい。
-
-            よって、$\boldsymbol{R} = \boldsymbol{R}_{\parallel} + \boldsymbol{R}_{\perp}$のようにしてそれぞれの成分に分ける。また、法線ベクトルを規格化したものとして$\boldsymbol{n} = 1 / \sqrt{3} (1, 1, 1)$を定義する。このとき、$\boldsymbol{R}_{\parallel}$は$\boldsymbol{n}$と平行なので実数$\alpha$を用いて$\boldsymbol{R}_{\parallel} = \alpha \boldsymbol{n}$と書けることがわかる。
-
-            以下で$\alpha$を求めていく。
-            \begin{gather*}
-              \boldsymbol{R}_{\parallel} = \alpha \boldsymbol{n} \\
-              \boldsymbol{n} \cdot \boldsymbol{R}_{\parallel} = \alpha \boldsymbol{n} \cdot \boldsymbol{n} = \alpha |\boldsymbol{n}|^2  \\
-              \boldsymbol{n} \cdot \boldsymbol{R} = \alpha \quad ( \because |\boldsymbol{n}| = 1 )
-            \end{gather*}
-            最終行において、$\boldsymbol{n} \cdot \boldsymbol{R}_{\parallel} = \boldsymbol{n} \cdot \boldsymbol{R}$としたのは、$\boldsymbol{R}$を$\boldsymbol{n}$と平行成分と垂直成分に分けて、垂直なベクトルの内積が0となる性質を用いた。
-
-            計算を実施して、
-            \begin{align*}
-              \alpha = 
-                \frac{1}{\sqrt{3}} \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} 
-                \cdot \frac{1}{2} \begin{pmatrix} l + n \\ l + m \\ m + n \end{pmatrix}
-                = \frac{1}{2 \sqrt{3}} \left( l + m + n \right)
-            \end{align*}
-            $\alpha$を求めることができたので法線ベクトルに垂直な成分を求めていく。
-            \begin{align*}
-              \boldsymbol{R}_{\perp} &= \boldsymbol{R} - \boldsymbol{R}_{\parallel} = 
-                \frac{a}{2} \begin{pmatrix}l + m \\ l + n \\ n + m\end{pmatrix} 
-                - \frac{1}{3} \begin{pmatrix}l + m + n \\ l + m + n  \\ l + m + n \end{pmatrix}
-                \\
-                &= \frac{1}{6}\begin{pmatrix}l + m - 2n \\ l + n - 2m \\ n + m - 2l\end{pmatrix}
-                = \frac{l}{6}\begin{pmatrix}1 \\ 1 \\ -2 \end{pmatrix} + \frac{m}{6}\begin{pmatrix}1 \\ -2 \\ 1 \end{pmatrix} + \frac{n}{6}\begin{pmatrix}-2 \\ 1 \\ 1 \end{pmatrix}
-            \end{align*}
-            ここで、$l, m , n$にかかるベクトルをそれぞれ$\hat{\boldsymbol{x}'}, \hat{\boldsymbol{y}'}, \hat{\boldsymbol{z}'}$、とする。このとき、$\hat{\boldsymbol{x}'} + \hat{\boldsymbol{y}'} = - \hat{\boldsymbol{z}'}$が成立する。よって、$\boldsymbol{R}_{\perp}$を$\hat{\boldsymbol{x}'}, \hat{\boldsymbol{y}'}$で表すと、
-            \begin{align*}
-              \boldsymbol{R}_{\perp} = \frac{l - n}{6} \hat{\boldsymbol{x}'} + \frac{m - n }{6} \hat{\boldsymbol{y}'}
-            \end{align*}
-            となる。$\hat{\boldsymbol{x}'}$と$\hat{\boldsymbol{y}'}$のなす角は、120°だから(111)面に射影すると120°ずつ分布し、三角格子となる。
-          \end{proof}
-      \end{itemize}
-      \item $y$方向に有限の幅($0.4a$)を持つ帯を伝搬する電磁波を考える。$xy$平面上を伝搬するTMモードを考える。つまり、$k_z = 0であり、 E_z$成分のみを持つ。
-        この時、成立する条件として、$\nabla \cdot \mathbf{H}=0$が成立する。また、帯の外で$y$方向の波は指数関数的に減衰していく。
-
-        この時、磁場は波数に垂直な方向を向いた磁場の平面波の重ね合わせで書く必要がある。よって、以下のように書ける。
-        \begin{align*}
-          \mathbf{H}_1 &= e^{i(k_x x + k_y y)}(H_x \hat{\boldsymbol{x}} + H_y \hat{\boldsymbol{y}}) \\
-          \mathbf{H}_2 &= e^{i(k_x x - k_y y)}(H_x' \hat{\boldsymbol{x}} - H_y' \hat{\boldsymbol{y}}) 
-        \end{align*}
-        条件$\nabla \cdot \mathbf{H}=0$を以上の2つの式に適用することで、以下の2つが得られる。
-        \begin{align*}
-          k_x H_x + k_y H_y &= 0 \quad \cdots (1) \\
-          k_x H_x' - k_y H_y' &= 0 \quad \cdots (2)
-        \end{align*}
-        帯内の磁場は$\mathbf{H}_1$と$\mathbf{H}_2$の線形結合で書けるので、
-        \begin{align*}
-          \mathbf{H} = \alpha \mathbf{H}_1 + \beta \mathbf{H}_2 = e^{ik_x x} \left\{ (\alpha e^{ik_y y} H_x + \beta e^{- i k_y y} H_x' ) \hat{\boldsymbol{x}}  + (\alpha e^{ik_y y} H_y + \beta e^{- i k_y y} H_y' ) \hat{\boldsymbol{y}}\right\}
-        \end{align*}
-        $y$依存性は、システムの依存性からsinもしくは、cosの形で掛ける必要がある。よって、$\alpha H_x$などは任意の値を取ることができない。
-
-        $\alpha H_x = \beta H_x'$が成立する時、$x$成分はcosでかけて、$y$成分はsinでかけることができる。よって、これを適用すると
-        \begin{align*}
-          \mathbf{H} = e^{i k_x x} \left\{ 2 \alpha H_x \cos \left( k_y y \right) \hat{\boldsymbol{x}} + 2 i \alpha H_y \sin \left( k_y y \right) \hat{\boldsymbol{y}} \right\}
-        \end{align*}
-        となる。
-
-        次に、帯の外側を考える。はじめに帯を上側を考える。$y$は指数関数的に減衰するため、減衰定数を$\kappa$とすると、
-        \begin{align*}
-          \mathbf{H} = e^{i k_x x - \kappa y}\left( H_x'' \hat{\boldsymbol{x}} + H_y'' \hat{\boldsymbol{y}} \right)
-        \end{align*}
-        と書ける。$y$方向への対称性（偶関数か奇関数か）で$\kappa$の符号が入れ替わる。条件$\nabla \cdot \mathbf{H}$を考えると、
-        \begin{align*}
-          i k_x H_x'' - \kappa H_y'' = 0 \quad \cdots (3) \\
-        \end{align*}
-        となる。次に磁場の接続を考える。帯の$y$方向の幅を$w$として、中心が$y = 0$にあるとする。つまり、$y = \pm w / 2$で磁場が連続であるときの場合を考える。
-        $y = w / 2$のとき、$x成分とy$成分それぞれについて考えると、
-        \begin{align*}
-          2 \alpha \cos \left( k_y \frac{w}{2} \right)H_x &= e^{- \kappa \frac{w}{2}} H_x'' \quad \cdots (4) \\
-          2 \alpha i \sin \left( k_y \frac{w}{2} \right)H_y &= e^{- \kappa \frac{w}{2}} H_y'' \quad \cdots (5)
-        \end{align*}
-        $(5)/(4)$をして整理をすると、
-        \begin{align*}
-          \kappa = - k_y \cot \left( k_y \frac{w}{2} \right)
-        \end{align*}
-        $(4)/(5)$をして整理をすると、
-        \begin{align*}
-          \kappa = k_y \tan \left( k_y \frac{w}{2} \right)
-        \end{align*}
-        分散関係より、以下の等式が成立する
-        \begin{gather*}
-          \left( \frac{\omega}{c} \right)^2 = k_x^2 - \kappa^2
+        \boldsymbol{R}_{\perp} &= \boldsymbol{R} - \boldsymbol{R}_{\parallel} = 
+          \frac{a}{2} \begin{pmatrix}l + m \\ l + n \\ n + m\end{pmatrix} 
+          - \frac{1}{3} \begin{pmatrix}l + m + n \\ l + m + n  \\ l + m + n \end{pmatrix}
           \\
-          \Longleftrightarrow  
-          \kappa = \sqrt{k_x^2 - \left( \frac{\omega}{c} \right)^2} = \sqrt{k_x^2 - \frac{1}{\epsilon}(k_x^2 + k_y^2)} = \sqrt{\left( 1 - \frac{1}{\epsilon} \right) k_x^2 - \frac{k_y^2}{\epsilon}}
-        \end{gather*}
-        これを先の式に代入をして
-        \begin{align*}
-          k_y \tan \left( k_y \frac{w}{2} \right) = \sqrt{\left( 1 - \frac{1}{\epsilon} \right) k_x^2 - \frac{k_y^2}{\epsilon}}
-        \end{align*}
-        この式の$k_y$を変数としてグラフの交点を求める。この$k_y$を使って分散関係に代入することでガイドモードのグラフを作ることができる。
-    \end{enumerate}
+          &= \frac{1}{6}\begin{pmatrix}l + m - 2n \\ l + n - 2m \\ n + m - 2l\end{pmatrix}
+          = \frac{l}{6}\begin{pmatrix}1 \\ 1 \\ -2 \end{pmatrix} + \frac{m}{6}\begin{pmatrix}1 \\ -2 \\ 1 \end{pmatrix} + \frac{n}{6}\begin{pmatrix}-2 \\ 1 \\ 1 \end{pmatrix}
+      \end{align*}
+      ここで、$l, m , n$にかかるベクトルをそれぞれ$\hat{\boldsymbol{x}'}, \hat{\boldsymbol{y}'}, \hat{\boldsymbol{z}'}$、とする。このとき、$\hat{\boldsymbol{x}'} + \hat{\boldsymbol{y}'} = - \hat{\boldsymbol{z}'}$が成立する。よって、$\boldsymbol{R}_{\perp}$を$\hat{\boldsymbol{x}'}, \hat{\boldsymbol{y}'}$で表すと、
+      \begin{align*}
+        \boldsymbol{R}_{\perp} = \frac{l - n}{6} \hat{\boldsymbol{x}'} + \frac{m - n }{6} \hat{\boldsymbol{y}'}
+      \end{align*}
+      となる。$\hat{\boldsymbol{x}'}$と$\hat{\boldsymbol{y}'}$のなす角は、120°だから(111)面に射影すると120°ずつ分布し、三角格子となる。
+    \end{proof}
+\end{itemize}
+\item $y$方向に有限の幅($0.4a$)を持つ帯を伝搬する電磁波を考える。$xy$平面上を伝搬するTMモードを考える。つまり、$k_z = 0であり、 E_z$成分のみを持つ。
+  この時、成立する条件として、$\nabla \cdot \mathbf{H}=0$が成立する。また、帯の外で$y$方向の波は指数関数的に減衰していく。
+
+  この時、磁場は波数に垂直な方向を向いた磁場の平面波の重ね合わせで書く必要がある。よって、以下のように書ける。
+  \begin{align*}
+    \mathbf{H}_1 &= e^{i(k_x x + k_y y)}(H_x \hat{\boldsymbol{x}} + H_y \hat{\boldsymbol{y}}) \\
+    \mathbf{H}_2 &= e^{i(k_x x - k_y y)}(H_x' \hat{\boldsymbol{x}} - H_y' \hat{\boldsymbol{y}}) 
+  \end{align*}
+  条件$\nabla \cdot \mathbf{H}=0$を以上の2つの式に適用することで、以下の2つが得られる。
+  \begin{align*}
+    k_x H_x + k_y H_y &= 0 \quad \cdots (1) \\
+    k_x H_x' - k_y H_y' &= 0 \quad \cdots (2)
+  \end{align*}
+  帯内の磁場は$\mathbf{H}_1$と$\mathbf{H}_2$の線形結合で書けるので、
+  \begin{align*}
+    \mathbf{H} = \alpha \mathbf{H}_1 + \beta \mathbf{H}_2 = e^{ik_x x} \left\{ (\alpha e^{ik_y y} H_x + \beta e^{- i k_y y} H_x' ) \hat{\boldsymbol{x}}  + (\alpha e^{ik_y y} H_y + \beta e^{- i k_y y} H_y' ) \hat{\boldsymbol{y}}\right\}
+  \end{align*}
+  $y$依存性は、システムの依存性からsinもしくは、cosの形で掛ける必要がある。よって、$\alpha H_x$などは任意の値を取ることができない。
+
+  $\alpha H_x = \beta H_x'$が成立する時、$x$成分はcosでかけて、$y$成分はsinでかけることができる。よって、これを適用すると
+  \begin{align*}
+    \mathbf{H} = e^{i k_x x} \left\{ 2 \alpha H_x \cos \left( k_y y \right) \hat{\boldsymbol{x}} + 2 i \alpha H_y \sin \left( k_y y \right) \hat{\boldsymbol{y}} \right\}
+  \end{align*}
+  となる。
+
+  次に、帯の外側を考える。はじめに帯を上側を考える。$y$は指数関数的に減衰するため、減衰定数を$\kappa$とすると、
+  \begin{align*}
+    \mathbf{H} = e^{i k_x x - \kappa y}\left( H_x'' \hat{\boldsymbol{x}} + H_y'' \hat{\boldsymbol{y}} \right)
+  \end{align*}
+  と書ける。$y$方向への対称性（偶関数か奇関数か）で$\kappa$の符号が入れ替わる。条件$\nabla \cdot \mathbf{H}$を考えると、
+  \begin{align*}
+    i k_x H_x'' - \kappa H_y'' = 0 \quad \cdots (3) \\
+  \end{align*}
+  となる。次に磁場の接続を考える。帯の$y$方向の幅を$w$として、中心が$y = 0$にあるとする。つまり、$y = \pm w / 2$で磁場が連続であるときの場合を考える。
+  $y = w / 2$のとき、$x成分とy$成分それぞれについて考えると、
+  \begin{align*}
+    2 \alpha \cos \left( k_y \frac{w}{2} \right)H_x &= e^{- \kappa \frac{w}{2}} H_x'' \quad \cdots (4) \\
+    2 \alpha i \sin \left( k_y \frac{w}{2} \right)H_y &= e^{- \kappa \frac{w}{2}} H_y'' \quad \cdots (5)
+  \end{align*}
+  $(5)/(4)$をして整理をすると、
+  \begin{align*}
+    \kappa = - k_y \cot \left( k_y \frac{w}{2} \right)
+  \end{align*}
+  $(4)/(5)$をして整理をすると、
+  \begin{align*}
+    \kappa = k_y \tan \left( k_y \frac{w}{2} \right)
+  \end{align*}
+  分散関係より、以下の等式が成立する
+  \begin{gather*}
+    \left( \frac{\omega}{c} \right)^2 = k_x^2 - \kappa^2
+    \\
+    \Longleftrightarrow  
+    \kappa = \sqrt{k_x^2 - \left( \frac{\omega}{c} \right)^2} = \sqrt{k_x^2 - \frac{1}{\epsilon}(k_x^2 + k_y^2)} = \sqrt{\left( 1 - \frac{1}{\epsilon} \right) k_x^2 - \frac{k_y^2}{\epsilon}}
+  \end{gather*}
+  これを先の式に代入をして
+  \begin{align*}
+    k_y \tan \left( k_y \frac{w}{2} \right) = \sqrt{\left( 1 - \frac{1}{\epsilon} \right) k_x^2 - \frac{k_y^2}{\epsilon}}
+  \end{align*}
+  この式の$k_y$を変数としてグラフの交点を求める。この$k_y$を使って分散関係に代入することでガイドモードのグラフを作ることができる。
+  \item 教科書10章式(14)〜(17)の導出
+    \\
+    教科書式(6), (13)より以下の式が成立することがわかる。
+    \begin{align*}
+      \begin{cases}
+        \displaystyle \frac{dA}{dt} = - i \omega A = - i \omega_0 A - \sum_{l=1}^{3} \frac{A}{\tau_l} + \sum_{l=1}^{3} \sqrt{\frac{2}{\tau_l}}s_{l+} \quad ・・・（＊）
+        \\
+        \displaystyle s_{l-} = - s_{l+} + \sqrt{\frac{2}{\tau_l}} A
+      \end{cases}
+    \end{align*}
+    式（＊）から、$A / s_{1+}$を求める。与えられた条件から、$s_{2+}, s_{3+}$は0であることがわかるため、式を展開して整理すると、
+    \begin{align*}
+      & - i \omega A = - i \omega_0 A - \frac{A}{\tau_1} - \frac{A}{\tau_2} - \frac{A}{\tau_3} + \sqrt{\frac{2}{\tau_1}}s_{1+} \\
+      \Longleftrightarrow & \sqrt{\frac{2}{\tau_1}}s_{1+} = \left\{ - i \left( \omega - \omega_0 \right) + \left( \frac{1}{\tau_1} + \frac{1}{\tau_2} + \frac{1}{\tau_3} \right) \right\}A \\
+      \Longleftrightarrow & \frac{A}{s_{1+}} = \sqrt{\frac{2}{\tau_1}} \cfrac{1}{ - i \left( \omega - \omega_0 \right) + \left( \cfrac{1}{\tau_1} + \cfrac{1}{\tau_2} + \cfrac{1}{\tau_3} \right) }
+    \end{align*}
+    式(14)は導波管1における反射率を表しているので、定義から、$|s_{1-}|^2/|s_{1+}|^2$ということがわかる。
+    \begin{align*}
+      R\left( \omega \right) = \frac{|s_{1-}|^2}{|s_{1+}|^2} = \cfrac{\left|- s_{1+} + \sqrt{\cfrac{2}{\tau_1}A} \right|^2}{\left|s_{1+} \right|^2} = \left| - 1 + \sqrt{\frac{2}{\tau_1}} \frac{A}{s_{1+}} \right|^2
+    \end{align*}
+    先程求めた式を代入、整理をすると、
+    \begin{align*}
+      R(\omega) &= \left| -1 + \sqrt{\frac{2}{\tau_1}} \sqrt{\frac{2}{\tau_1}} \cfrac{1}{ - i \left( \omega - \omega_0 \right) + \left( \cfrac{1}{\tau_1} + \cfrac{1}{\tau_2} + \cfrac{1}{\tau_3} \right) } \right|^2 \\
+      &= \left| \cfrac{i \left( \omega - \omega_0 \right) - \left( \cfrac{1}{\tau_1} + \cfrac{1}{\tau_2} + \cfrac{1}{\tau_3} \right) + \cfrac{2}{\tau_1}}{ - i \left( \omega - \omega_0 \right) + \left( \cfrac{1}{\tau_1} + \cfrac{1}{\tau_2} + \cfrac{1}{\tau_3} \right) } \right|^2 = \left| \cfrac{i \left( \omega - \omega_0 \right) + \left( \cfrac{1}{\tau_1} - \cfrac{1}{\tau_2} - \cfrac{1}{\tau_3} \right)}{ - i \left( \omega - \omega_0 \right) + \left( \cfrac{1}{\tau_1} + \cfrac{1}{\tau_2} + \cfrac{1}{\tau_3} \right) } \right|^2 \\
+      &= \cfrac{(\omega - \omega_0)^2 + \left( \cfrac{1}{\tau_1} - \cfrac{1}{\tau_2} - \cfrac{1}{\tau_3} \right)^2 }{(\omega - \omega_0)^2 + \left( \cfrac{1}{\tau_1} + \cfrac{1}{\tau_2} + \cfrac{1}{\tau_3} \right)^2}
+    \end{align*}
+  となり、教科書の式を導出できた。
+
+  つぎに、式(15), (16)を導出する。どちらも導出方法は同じであるため、式(15)のみを導出する。
+
+  式(15), (16)は、導波管1から2,3への透過率を表している。よって定義は、
+  \begin{align*}
+    T_{1 \rightarrow 2} (\omega) &= \frac{|s_{2-}|^2}{|s_{1+}|^2} = \left| \frac{- s_{2+} + \sqrt{\frac{2}{\tau_2} } A}{s_{1+}} \right|^2 = \left| \sqrt{\frac{2}{\tau_2}} \frac{A}{s_{1+}} \right|^2 \\
+    &= \frac{2}{\tau_2} \left| \frac{A}{s_{1+}} \right|^2 = \cfrac{\cfrac{4}{\tau_1 \tau_2}}{(\omega - \omega_0)^2 + \left( \cfrac{1}{\tau_1} + \cfrac{1}{\tau_2} + \cfrac{1}{\tau_3} \right)^2}
+  \end{align*}
+  となることがわかる。
+
+  最後に式(17)を導出する。$\omega = \omega_0$において$R(\omega)=0$として、$T_{1 \to 2} + T_{1 \to 3} = 1$となることを示せば良い。式(15), (16)より、
+  \begin{align*}
+    & T_{1 \to 2} + T_{1 \to 3} = \cfrac{\cfrac{4}{\tau_1 \tau_2} + \cfrac{4}{\tau_1 \tau_3}}{\left( \cfrac{1}{\tau_1} +  \cfrac{1}{\tau_2} +  \cfrac{1}{\tau_3} \right)^2}  = 1 \\
+    \Longleftrightarrow & \frac{4}{\tau_1 \tau_2} + \frac{4}{\tau_1 \tau_3} = \left( \frac{1}{\tau_1} +  \frac{1}{\tau_2} +  \frac{1}{\tau_3} \right)^2 \\
+    \Longleftrightarrow & \frac{4}{\tau_1 \tau_2} + \frac{4}{\tau_1 \tau_3} = \frac{1}{\tau_1^2} + \frac{1}{\tau_2^2} + \frac{1}{\tau_3^2} + \frac{2}{\tau_1 \tau_2} + \frac{2}{\tau_1 \tau_3} + \frac{2}{\tau_2 \tau_3} \\
+    \Longleftrightarrow & \frac{1}{\tau_1^2} + \frac{1}{\tau_2^2} + \frac{1}{\tau_3^2} - \frac{2}{\tau_1 \tau_2} - \frac{2}{\tau_1 \tau_3} + \frac{2}{\tau_2 \tau_3} = 0 \\
+    \Longleftrightarrow & \left( \frac{1}{\tau_1} - \frac{1}{\tau_2} - \frac{1}{\tau_3} \right)^2= 0 \\
+    \therefore &\quad  \frac{1}{\tau_1} = \frac{1}{\tau_2} + \frac{1}{\tau_3} 
+  \end{align*}
+  以上より、式(17)を導出することができた。ちなみに、$\tau_1 = \tau_2 = \tau_3$として同様の計算を実施することで、$T_{1 \to 2} = T_{1 \to 3} \leq 8/9$となることがわかる。
+\end{enumerate}
     
 \end{document}
