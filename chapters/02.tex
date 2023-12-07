@@ -1,0 +1,67 @@
+%% 02.tex
+\documentclass[platex,dvipdfmx]{jsreport}
+
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{UD_GREEN}{HTML}{03af7a}
+\usepackage{bm}
+\usepackage[left=30truemm]{geometry}
+\usepackage{amsmath,amssymb}
+\numberwithin{equation}{section}
+
+\begin{document}
+
+\chapter{原理}
+\section{Maxwell方程式}
+フォトニック結晶における電磁波の振る舞いは、Maxwell方程式によって記述される。Maxwell方程式は以下のように表される。
+\begin{align}
+  \nabla \times \bm{E} &= -\frac{\partial \bm{B}}{\partial t} \\
+  \nabla \times \bm{H} &= \bm{j} + \frac{\partial \bm{D}}{\partial t} \\
+  \nabla \cdot \bm{D} &= \rho \\
+  \nabla \cdot \bm{B} &= 0
+\end{align}
+
+今回は、自由電荷や電流のない均一な誘電物質の混合誘電媒体を考えるため、$\rho = 0$、$\bm{j} = 0$となる。また、低損失の誘電体において、$\bm{D} = \epsilon(r) \bm{E}(\bm{r})$、透過率$\mu = 1$とみなすことで$\bm{B}(\bm{r}) = \mu \bm{H}(\bm{r}) = \bm{H}(\bm{r})$となる。
+
+一般に、$\bm{E}$と$\bm{H}$は時間空間における複雑な関数であるが、Maxwell方程式は線形であることから、$\bm{E}$と$\bm{H}$を時間と空間の関数に分離することができる。すなわち、$\bm{E}(\bm{r},t) = \bm{E}(\bm{r}) e^{-i\omega t}$、$\bm{H}(\bm{r},t) = \bm{H}(\bm{r}) e^{-i\omega t}$とすることができ、Maxwell方程式は以下のように表される。
+\begin{align}
+  \nabla \cdot \bm{H}(\bm{r}) &= 0 \\
+  \nabla \cdot \bm{D}(\bm{r}) &= 0 \\
+  \label{eq:curlE}
+  \nabla \times \bm{E}(\bm{r}) &= - \frac{i \omega}{c} \bm{H}(\bm{r}) \\
+  \label{eq:curlH}
+  \nabla \times \bm{H} (\bm{r}) &= \frac{i \omega}{c} \epsilon(\bm{r}) \bm{E}(\bm{r})
+\end{align}
+
+式(\ref{eq:curlE})と式(\ref{eq:curlH})より$\bm{E}(\bm{r})$を消去して、$\bm{H}(\bm{r})$についての式に整理すると以下のマスター方程式を得ることができる。
+\begin{align}
+  \label{eq:master}
+  \nabla \times \left( \frac{1}{\epsilon (\bm{e})} \nabla \times \bm{H}(\bm{r}) \right) = \left( \frac{\omega}{c} \right)^2 \bm{H}(\bm{r}) 
+\end{align}
+
+式(\ref{eq:master})を固有値問題とするために、左辺の$\bm{H}(\bm{r})$に作用する演算子$\hat{\Theta}$を定義する。演算子$\hat{\Theta}$は回転を取り、$\epsilon(\bm{r})$で割って再度回転を取る微分演算子である。
+
+次に、2つのベクトル場$\bm{F}$と$\bm{G}$について内積を以下のように定義する。
+\begin{align}
+  (\bm{F}, \bm{G}) = \int d\bm{r} \bm{F}^*(\bm{r}) \cdot \bm{G}(\bm{r})
+\end{align}
+
+このとき、演算子$\hat{\Theta}$は、任意のベクトル場$\bm{F}, \bm{G}$に対して次の内積関係が成立する。
+\begin{align}
+  \label{eq:inner}
+  (\bm{F}, \hat{\Theta} \bm{G}) = (\hat{\Theta} \bm{F}, \bm{G})
+\end{align}
+
+式(\ref{eq:inner})は、演算子$\hat{\Theta}$がエルミート演算子であることを示しており、これはマスター方程式(\ref{eq:master})を解くときに得られる固有値が実数になりうことや固有値が異なる固有関数は互いに直行することなど、量子力学のシュレディンガー方程式と類似している。
+
+マスター方程式(\ref{eq:master})にBlochの定理を適用すると、マスター方程式の解は次のように表される。
+\begin{align}
+  \bm{H}_{\bm{k}}(\bm{r}) = e^{i \bm{k} \cdot \bm{r}} \bm{u}_{\bm{k}}(\bm{r}) = e^{i \bm{k} \cdot \bm{r}} \bm{u}_{\bm{k}}(\bm{r + R})
+\end{align}
+ここで、$\bm{k}$はブロッホ波ベクトル、$\bm{R}$は格子ベクトルである。
+
+\section{平面波展開法}
+
+\end{document}
