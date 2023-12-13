@@ -1,0 +1,21 @@
+%% mymacro.sty
+\newif\ifsubfile
+
+\newcommand\mokuji{
+  \ifsubfile
+    \tableofcontents
+    \clearpage
+  \else
+    \relax
+  \fi
+}
+
+\newcommand\bunken{
+  \ifsubfile
+    \clearpage
+    \bibliographystyle{junsrt}
+    \bibliography{mybib}
+  \else
+    \relax
+  \fi
+}
