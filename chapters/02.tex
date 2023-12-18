@@ -1,7 +1,8 @@
 %% 02.tex
-\documentclass[platex,dvipdfmx]{jsreport}
+\documentclass[platex,dvipdfmx,draft]{jsreport}
 
 \usepackage{graphicx}
+\graphicspath{{./images}{../images}}
 \usepackage{pdfpages}
 \usepackage{tikz}
 \usepackage{xcolor}
@@ -62,11 +63,28 @@
 \end{align}
 ここで、$\bm{k}$はブロッホ波ベクトル、$\bm{R}$は格子ベクトルである。
 
-\section{Inverse Opals構造}
+\section{逆オパール(Inverse Opals)構造}
 Inverse Opals構造は、フォトニック結晶の構造の1つである。Inverse Opals構造は、球状の粒子を三次元的に配置した構造であり、図\ref{fig:inverse_opals}のように、球状の粒子の間隔を空洞とし、空洞の中に誘電体を充填した構造である。
 
 微細な球体を懸濁させたコロイドを蒸発させることによりfcc格子に自己集合させることができるので合成オパールは容易に製造することができる。合成オパールの球間に高誘電体物質を浸透させ、球を溶解させることで構造を反転させ、空気穴の逆オパールを作製することができる。
 
+\section{ウッドパイル構造}
+ウッドパイル構造は、棒状の誘電体物質を直行する方向に交互に積み重ねたものである。誘電体は丸太のような形状もあれば長方形の場合もある。
+
+最も単純に直行する方向に交互に積み重ねたものは、図\ref{fig:woodpile}のように、直方体の誘電体を交互に積み重ねたものである。この構造の場合、大きなギャップは生じない。より大きなギャップを生じさせるためには、ある方向を向いた層Aとそれに直交する方向の層Bに対して、それぞれ水平方向に半分だけずらした層C、Dを用いてABCDABCD$\cdots$のように並べることが有効である。
+
+\section{ヤブロノバイト構造}
+ヤブロノバイト構造は、発見者であるEli Yablonovitchらにちなんで名付けられた結晶構造である。誘電体のスラブ（板状の素材）に三角形配列の穴を開け、それぞれの穴を特定の角度で複数回（通常は三回）掘ることによって形成される。
+
+
+\section{ダイヤモンド構造}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\linewidth]{diamond.png}
+  \caption{ダイヤモンド構造}
+  \label{fig:diamond}
+\end{figure}
 
 
 \end{document}
