@@ -1,9 +1,19 @@
 % 01.tex
-\documentclass[platex,dvipdfmx]{jsreport}
+\documentclass[platex,dvipdfmx,draft]{jsreport}
 
-
-\begin{document}
+\usepackage{graphicx}
+\graphicspath{{./images}{../images}}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{UD_GREEN}{HTML}{03af7a}
+\usepackage{bm}
+\usepackage[left=30truemm]{geometry}
+\usepackage{amsmath,amssymb}
+\numberwithin{equation}{section}
 % \subfiletrue
+\begin{document}
+
 \chapter{序論}
 
 
@@ -11,6 +21,13 @@
 
   %% 目次
 \subsection{フォトニック結晶}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\linewidth]{crystals.png}
+  \caption{フォトニック結晶の構造}
+  \label{fig:photonic_crystal}
+\end{figure}
 
 
 フォトニック結晶は、1987年に、E.Yablonovitchが提案した概念であり、屈折率の異なる材質を周期的に配置した誘電体である。特に、フォトニックバンドギャップと呼ばれる、波数ベクトルに関わらず結晶中にどのモードも存在できないような周波数ギャップを持つように設計されたフォトニック結晶は、特定の方向への光の伝播を制御することが可能となる。
