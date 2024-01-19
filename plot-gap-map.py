@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import freq_data_process
 
 # 与えられたデータ
-# Yablonovite e-15
 colors = ["blue", "orange", "green", "red"]
 d = """ 
  This is Gap Checker. Radius is 0
