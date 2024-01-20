@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 import freq_data_process
 
 # filename = input('Enter the filename: ')
-structure = "inv_opals"
+structure = "woodpile"
 files = [
-    [f'datas/{structure}/gaps.e-5.dat', 'epsilon = 5'],
-    [f'datas/{structure}/gaps.e-10.dat', 'epsilon = 10'],
-    [f'datas/{structure}/gaps.e-13.dat', 'epsilon = 13'],
-    [f'datas/{structure}/gaps.e-15.dat', 'epsilon = 15'],
+    [f'datas/{structure}/gaps.e-5.dat', 'epsilon = 5', "#333333"],
+    [f'datas/{structure}/gaps.e-10.dat', 'epsilon = 10', "#FF4B00"],
+    [f'datas/{structure}/gaps.e-13.dat', 'epsilon = 13', "#005AFF"],
+    [f'datas/{structure}/gaps.e-15.dat', 'epsilon = 15', "#03AF7A"],
 ]
 
 fig, ax = plt.subplots()
@@ -36,13 +36,14 @@ for file in files:
         if gap_max[i] == gap_min[i] == 0:
             gap_midgap_ratio.append(0)
         else:
+            # ギャップ-ミッドギャップ比の計算
             gap_midgap_ratio.append(100 * (gap_max[i] - gap_min[i]) / ((gap_max[i] + gap_min[i]) / 2))
+
     # グラフのプロット
+    ax.plot(widths, gap_midgap_ratio, label=file[1], marker='o', markersize=4, color=file[2])
 
-    ax.plot(widths, gap_midgap_ratio, label=file[1], marker='o', markersize=4)
 
-
-plt.xlabel('Width $w / a$')
+plt.xlabel('Radius $r / a$')
 plt.ylabel('Gap-midgap ratio (%)')
 plt.legend()
 plt.show()
