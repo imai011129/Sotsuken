@@ -1,9 +1,3 @@
-import matplotlib.pyplot as plt
-import freq_data_process
-
-# 与えられたデータ
-colors = ["blue", "orange", "green", "red"]
-d = """ 
  This is Gap Checker. Radius is 0 
  This is Gap Checker. Radius is 0.01 
  This is Gap Checker. Radius is 0.02 
@@ -119,46 +113,3 @@ Gap from band 2 (0.6707833560617501) to band 3 (0.745228315695144), 10.514738136
  This is Gap Checker. Radius is 0.9700000000000006 
  This is Gap Checker. Radius is 0.9800000000000006 
  This is Gap Checker. Radius is 0.9900000000000007 
-
-"""
-
-datas = freq_data_process.process_data(d)
-plt.figure()
-# r.append("Radius,Frequency-min,Frequency-max,Frequency-min,Frequency-max")
-
-data_lines = []
-for data in datas:
-    # データを処理してリストに格納
-    data_lines.append(data.split(","))
-    x = []
-    y1 = []
-    y2 = []
-    y3 = []
-    y4 = []
-    # y5 = []
-    # y6 = []
-
-    for line in data_lines:
-        x.append(float(line[0]))
-        y1.append(float(line[1]))
-        y2.append(float(line[2]))
-        y3.append(float(line[3]))
-        y4.append(float(line[4]))
-        # y5.append(float(line[5]))
-        # y6.append(float(line[6]))
-    # y1 < y2 の条件を満たすかどうかのブール値のリストを生成
-    where_condition_1 = [y1_val < y2_val for y1_val, y2_val in zip(y1, y2)]
-    where_condition_2 = [y3_val < y4_val for y3_val, y4_val in zip(y3, y4)]
-    # where_condition_3 = [y5_val < y6_val for y5_val, y6_val in zip(y5, y6)]
-
-    # グラフの描画
-    plt.fill_between(x, y1, y2, color='#555555', where=where_condition_1)
-    plt.fill_between(x, y3, y4, color='#555555', where=where_condition_2)
-    # plt.fill_between(x, y5, y6, color='#555555', where=where_condition_3)
-plt.xlabel('Radius $r / a$', fontname='Times New Roman', fontsize=14)
-plt.ylabel('Frequency $\omega a / 2 \pi c$',
-           fontname='Times New Roman', fontsize=14)
-# plt.legend()
-plt.xlim(0, 0.7)
-plt.ylim(0, 1)
-plt.show()
