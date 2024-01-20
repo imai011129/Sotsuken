@@ -2,30 +2,47 @@
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+import freq_data_process
 
 # filename = input('Enter the filename: ')
-filenames = [
-    "./datas/inv_opals/e-10.csv", 
-    "./datas/inv_opals/e-13.csv", 
-    "./datas/inv_opals/e-15.csv",
+structure = "inv_opals"
+files = [
+    [f'datas/{structure}/gaps.e-5.dat', 'epsilon = 5'],
+    [f'datas/{structure}/gaps.e-10.dat', 'epsilon = 10'],
+    [f'datas/{structure}/gaps.e-13.dat', 'epsilon = 13'],
+    [f'datas/{structure}/gaps.e-15.dat', 'epsilon = 15'],
 ]
+
 fig, ax = plt.subplots()
+for file in files:
+    f = open(file[0], 'r')
+    content = f.read()
+    f.close()
+    data_strings = freq_data_process.process_data(content)
 
 
-for filename in filenames:
-    rows = []
-    with open(filename) as f:
-        reader = csv.reader(f)
-        rows = [row for row in reader]
+    data = []
+    for s in data_strings:
+        parts = s.split(',')
+        if all(p.strip() for p in parts):
+            data.append(list(map(float, parts)))
 
-    header = rows.pop(0)
+    # 各列のデータを抽出
+    widths = [row[0] for row in data]
+    gap_min = [row[1] for row in data]
+    gap_max = [row[2] for row in data]
+    gap_midgap_ratio = []
+    for i in range(len(gap_min)):
+        if gap_max[i] == gap_min[i] == 0:
+            gap_midgap_ratio.append(0)
+        else:
+            gap_midgap_ratio.append(100 * (gap_max[i] - gap_min[i]) / ((gap_max[i] + gap_min[i]) / 2))
+    # グラフのプロット
 
-    data = np.float_(np.array(rows).T)
+    ax.plot(widths, gap_midgap_ratio, label=file[1], marker='o', markersize=4)
 
-    ax.plot(data[0], data[1], linestyle='solid', marker='o', markersize=5, label=filename)
-ax.legend()
-ax.set_xlabel(header[0], fontname="Times New Roman",
-              fontsize=14, fontstyle="italic")
-ax.set_ylabel(header[1], fontname="Times New Roman", fontsize=14)
 
+plt.xlabel('Width $w / a$')
+plt.ylabel('Gap-midgap ratio (%)')
+plt.legend()
 plt.show()

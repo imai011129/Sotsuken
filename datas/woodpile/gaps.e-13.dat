@@ -1,117 +1,117 @@
- This is Gap Checker. Width is 0
- This is Gap Checker. Width is 0.01
- This is Gap Checker. Width is 0.02
- This is Gap Checker. Width is 0.03
- This is Gap Checker. Width is 0.04
- This is Gap Checker. Width is 0.05
+ This is Gap Checker. Radius is 0
+ This is Gap Checker. Radius is 0.01
+ This is Gap Checker. Radius is 0.02
+ This is Gap Checker. Radius is 0.03
+ This is Gap Checker. Radius is 0.04
+ This is Gap Checker. Radius is 0.05
 Gap from band 4 (0.6451440768987091) to band 5 (0.6484174055725154), 0.5060955691959649%
- This is Gap Checker. Width is 0.060000000000000005
+ This is Gap Checker. Radius is 0.060000000000000005
 Gap from band 4 (0.6129268420377815) to band 5 (0.6273276524226427), 2.3222347428180528%
- This is Gap Checker. Width is 0.07
+ This is Gap Checker. Radius is 0.07
 Gap from band 4 (0.587211116664652) to band 5 (0.6115171655347489), 4.055305815509866%
- This is Gap Checker. Width is 0.08
+ This is Gap Checker. Radius is 0.08
 Gap from band 4 (0.5616481208667397) to band 5 (0.5965271971925552), 6.02310820856741%
- This is Gap Checker. Width is 0.09
+ This is Gap Checker. Radius is 0.09
 Gap from band 4 (0.5427764191542183) to band 5 (0.5841576355968792), 7.344035131106347%
- This is Gap Checker. Width is 0.09999999999999999
+ This is Gap Checker. Radius is 0.09999999999999999
 Gap from band 4 (0.5255227269243892) to band 5 (0.5723922903430531), 8.53792191226525%
- This is Gap Checker. Width is 0.10999999999999999
+ This is Gap Checker. Radius is 0.10999999999999999
 Gap from band 4 (0.5136416533194388) to band 5 (0.5633628874134254), 9.23324502608932%
- This is Gap Checker. Width is 0.11999999999999998
+ This is Gap Checker. Radius is 0.11999999999999998
 Gap from band 4 (0.5004585123861962) to band 5 (0.5541185594606657), 10.176600365584584%
- This is Gap Checker. Width is 0.12999999999999998
+ This is Gap Checker. Radius is 0.12999999999999998
 Gap from band 4 (0.48998394189445477) to band 5 (0.5457934069206138), 10.776343987441939%
- This is Gap Checker. Width is 0.13999999999999999
+ This is Gap Checker. Radius is 0.13999999999999999
 Gap from band 4 (0.478010184420877) to band 5 (0.536986810784616), 11.621044523742407%
- This is Gap Checker. Width is 0.15
+ This is Gap Checker. Radius is 0.15
 Gap from band 4 (0.4670231963582595) to band 5 (0.5277711158301618), 12.213161801913516%
- This is Gap Checker. Width is 0.16
+ This is Gap Checker. Radius is 0.16
 Gap from band 4 (0.4568229053971402) to band 5 (0.5186290371931005), 12.672306875895629%
- This is Gap Checker. Width is 0.17
+ This is Gap Checker. Radius is 0.17
 Gap from band 4 (0.4493037397256617) to band 5 (0.5114607086057462), 12.939065134650775%
- This is Gap Checker. Width is 0.18000000000000002
+ This is Gap Checker. Radius is 0.18000000000000002
 Gap from band 4 (0.4409139213441927) to band 5 (0.5037705854888873), 13.30744046081852%
- This is Gap Checker. Width is 0.19000000000000003
+ This is Gap Checker. Radius is 0.19000000000000003
 Gap from band 4 (0.43433654910170966) to band 5 (0.4974182103683568), 13.54040011612599%
- This is Gap Checker. Width is 0.20000000000000004
+ This is Gap Checker. Radius is 0.20000000000000004
 Gap from band 4 (0.4265352812687556) to band 5 (0.49035101896765115), 13.920098420587484%
- This is Gap Checker. Width is 0.21000000000000005
+ This is Gap Checker. Radius is 0.21000000000000005
 Gap from band 4 (0.41935409458493667) to band 5 (0.48385886234128367), 14.283401774010672%
- This is Gap Checker. Width is 0.22000000000000006
+ This is Gap Checker. Radius is 0.22000000000000006
 Gap from band 4 (0.41229155901545417) to band 5 (0.4769244443727675), 14.537049515762106%
- This is Gap Checker. Width is 0.23000000000000007
+ This is Gap Checker. Radius is 0.23000000000000007
 Gap from band 4 (0.407350163330499) to band 5 (0.47165813758959974), 14.631937876305969%
- This is Gap Checker. Width is 0.24000000000000007
+ This is Gap Checker. Radius is 0.24000000000000007
 Gap from band 4 (0.4012249251162586) to band 5 (0.4655916657232287), 14.851294100089316%
- This is Gap Checker. Width is 0.25000000000000006
+ This is Gap Checker. Radius is 0.25000000000000006
 Gap from band 4 (0.3968179382920688) to band 5 (0.4607774007291405), 14.916000478750245%
- This is Gap Checker. Width is 0.26000000000000006
+ This is Gap Checker. Radius is 0.26000000000000006
 Gap from band 4 (0.3925110753839096) to band 5 (0.4560946271911159), 14.985417046872795%
- This is Gap Checker. Width is 0.2700000000000001
+ This is Gap Checker. Radius is 0.2700000000000001
 Gap from band 4 (0.38697510499026305) to band 5 (0.4505251894985166), 15.176134247700842%
- This is Gap Checker. Width is 0.2800000000000001
+ This is Gap Checker. Radius is 0.2800000000000001
 Gap from band 4 (0.382082891869292) to band 5 (0.44482101212268166), 15.174222772565026%
- This is Gap Checker. Width is 0.2900000000000001
+ This is Gap Checker. Radius is 0.2900000000000001
 Gap from band 4 (0.37703619094402335) to band 5 (0.43723860649400986), 14.786756446202782%
- This is Gap Checker. Width is 0.3000000000000001
+ This is Gap Checker. Radius is 0.3000000000000001
 Gap from band 4 (0.37345499468788873) to band 5 (0.4313675426078038), 14.391383251892696%
- This is Gap Checker. Width is 0.3100000000000001
+ This is Gap Checker. Radius is 0.3100000000000001
 Gap from band 4 (0.3695007414756994) to band 5 (0.4244853074307454), 13.850259971387697%
- This is Gap Checker. Width is 0.3200000000000001
+ This is Gap Checker. Radius is 0.3200000000000001
 Gap from band 4 (0.3665102957843294) to band 5 (0.41872087888168874), 13.298143217394806%
- This is Gap Checker. Width is 0.3300000000000001
+ This is Gap Checker. Radius is 0.3300000000000001
 Gap from band 4 (0.3624982950891193) to band 5 (0.41104942265419664), 12.552846179086764%
- This is Gap Checker. Width is 0.34000000000000014
+ This is Gap Checker. Radius is 0.34000000000000014
 Gap from band 4 (0.3590645551932558) to band 5 (0.40304227248388447), 11.54108996101513%
- This is Gap Checker. Width is 0.35000000000000014
+ This is Gap Checker. Radius is 0.35000000000000014
 Gap from band 4 (0.35601354561501364) to band 5 (0.39526988449259265), 10.450473763798126%
- This is Gap Checker. Width is 0.36000000000000015
+ This is Gap Checker. Radius is 0.36000000000000015
 Gap from band 4 (0.35379561461614434) to band 5 (0.38971009073990986), 9.660847486453813%
- This is Gap Checker. Width is 0.37000000000000016
+ This is Gap Checker. Radius is 0.37000000000000016
 Gap from band 4 (0.3510434345413049) to band 5 (0.38341310085565194), 8.814590041561006%
- This is Gap Checker. Width is 0.38000000000000017
+ This is Gap Checker. Radius is 0.38000000000000017
 Gap from band 4 (0.3488838908695356) to band 5 (0.37844177634340637), 8.12782686114582%
- This is Gap Checker. Width is 0.3900000000000002
+ This is Gap Checker. Radius is 0.3900000000000002
 Gap from band 4 (0.34579833430147583) to band 5 (0.3723993008211124), 7.407700949919188%
- This is Gap Checker. Width is 0.4000000000000002
+ This is Gap Checker. Radius is 0.4000000000000002
 Gap from band 4 (0.3428539650654533) to band 5 (0.36606091241163013), 6.547174585689813%
- This is Gap Checker. Width is 0.4100000000000002
+ This is Gap Checker. Radius is 0.4100000000000002
 Gap from band 4 (0.3404522386725616) to band 5 (0.3600368557554135), 5.591697926102581%
- This is Gap Checker. Width is 0.4200000000000002
+ This is Gap Checker. Radius is 0.4200000000000002
 Gap from band 4 (0.33876804385387826) to band 5 (0.3558421232616128), 4.916161673428448%
- This is Gap Checker. Width is 0.4300000000000002
+ This is Gap Checker. Radius is 0.4300000000000002
 Gap from band 4 (0.33661082816730786) to band 5 (0.3510184113855204), 4.190509184159169%
- This is Gap Checker. Width is 0.4400000000000002
+ This is Gap Checker. Radius is 0.4400000000000002
 Gap from band 4 (0.33498053871290534) to band 5 (0.34737312941274257), 3.6323071974913943%
- This is Gap Checker. Width is 0.45000000000000023
+ This is Gap Checker. Radius is 0.45000000000000023
 Gap from band 4 (0.33248306537335476) to band 5 (0.3428165674932317), 3.060419883840939%
- This is Gap Checker. Width is 0.46000000000000024
+ This is Gap Checker. Radius is 0.46000000000000024
 Gap from band 4 (0.33029612939975694) to band 5 (0.33855199086963), 2.468680473093924%
- This is Gap Checker. Width is 0.47000000000000025
+ This is Gap Checker. Radius is 0.47000000000000025
 Gap from band 4 (0.3281475009503423) to band 5 (0.3336876476366438), 1.6741772322396953%
- This is Gap Checker. Width is 0.48000000000000026
+ This is Gap Checker. Radius is 0.48000000000000026
 Gap from band 4 (0.3267037057921424) to band 5 (0.3304790443207911), 1.1489463252040395%
- This is Gap Checker. Width is 0.49000000000000027
+ This is Gap Checker. Radius is 0.49000000000000027
 Gap from band 4 (0.32478949868304324) to band 5 (0.32626567314405536), 0.453471387645821%
- This is Gap Checker. Width is 0.5000000000000002
+ This is Gap Checker. Radius is 0.5000000000000002
 Gap from band 4 (0.3234462243147641) to band 5 (0.3234534487078966), 0.0022335436030575416%
- This is Gap Checker. Width is 0.5100000000000002
- This is Gap Checker. Width is 0.5200000000000002
- This is Gap Checker. Width is 0.5300000000000002
- This is Gap Checker. Width is 0.5400000000000003
- This is Gap Checker. Width is 0.5500000000000003
- This is Gap Checker. Width is 0.5600000000000003
- This is Gap Checker. Width is 0.5700000000000003
- This is Gap Checker. Width is 0.5800000000000003
- This is Gap Checker. Width is 0.5900000000000003
- This is Gap Checker. Width is 0.6000000000000003
- This is Gap Checker. Width is 0.6100000000000003
- This is Gap Checker. Width is 0.6200000000000003
- This is Gap Checker. Width is 0.6300000000000003
- This is Gap Checker. Width is 0.6400000000000003
- This is Gap Checker. Width is 0.6500000000000004
- This is Gap Checker. Width is 0.6600000000000004
- This is Gap Checker. Width is 0.6700000000000004
- This is Gap Checker. Width is 0.6800000000000004
- This is Gap Checker. Width is 0.6900000000000004
- This is Gap Checker. Width is 0.7000000000000004
+ This is Gap Checker. Radius is 0.5100000000000002
+ This is Gap Checker. Radius is 0.5200000000000002
+ This is Gap Checker. Radius is 0.5300000000000002
+ This is Gap Checker. Radius is 0.5400000000000003
+ This is Gap Checker. Radius is 0.5500000000000003
+ This is Gap Checker. Radius is 0.5600000000000003
+ This is Gap Checker. Radius is 0.5700000000000003
+ This is Gap Checker. Radius is 0.5800000000000003
+ This is Gap Checker. Radius is 0.5900000000000003
+ This is Gap Checker. Radius is 0.6000000000000003
+ This is Gap Checker. Radius is 0.6100000000000003
+ This is Gap Checker. Radius is 0.6200000000000003
+ This is Gap Checker. Radius is 0.6300000000000003
+ This is Gap Checker. Radius is 0.6400000000000003
+ This is Gap Checker. Radius is 0.6500000000000004
+ This is Gap Checker. Radius is 0.6600000000000004
+ This is Gap Checker. Radius is 0.6700000000000004
+ This is Gap Checker. Radius is 0.6800000000000004
+ This is Gap Checker. Radius is 0.6900000000000004
+ This is Gap Checker. Radius is 0.7000000000000004

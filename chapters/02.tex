@@ -110,7 +110,21 @@
 この結晶は空気中の高誘電体ロッドを三角格子状に並べたロッド層と、高誘電体中に円筒状の空気孔を三角格子状に並べたホール層により構成されている。
 
 \section{ギャップ-ミッドギャップ比}
-なぜ評価手法にギャップ-ミッドギャップ比を用いるのかについて述べる
+マスター方程式\ref{eq:master}において、$\epsilon(r)$を拡大または縮小した$\epsilon'(r)$を考える。このとき、$\epsilon'(r) = \epsilon(r / s)$であり、尺度に関するパラメータ$s$を用いて表すことができる。$r' = sr$、$\nabla' = \nabla / s$と変数変換を行うと、式\ref{eq:master}は以下のように表される。
 
-結論：フォトニックバンドギャップの広がりは、その周波数幅$\Delta \omega$で特徴付けることができますが、結晶のスケールに依存してしまう
+\begin{align}
+  s \nabla' \times \left( \frac{1}{\epsilon(\bm{r}'/s)} s \nabla' \times \bm{H}(\bm{r}'/s) \right)
+  = \left( \frac{\omega}{c} \right)^2 \bm{H}(\bm{r}'/s)
+\end{align}
+
+$\epsilon(r' / s) = \epsilon' (r')$であることに注意して両辺を$s$で割ると、
+\begin{equation}
+  \begin{split}
+  \nabla' \times \left( \frac{1}{\epsilon'(\bm{r}')} \nabla' \times \bm{H}(\bm{r}' / s) \right) =& \left( \frac{\omega}{cs} \right)^2  \bm{H}(\bm{r}' / s)
+  \\
+  =& \left( \frac{\omega'}{c} \right)^2 \bm{H}(\bm{r}' / s)
+\end{split}
+\end{equation}
+これは、モードプロファイル$\bm{H}'(\bm{r}') = \bm{H}(\bm{r}' / s)$、周波数$\omega' = \omega / s$に関するマスター方程式である。したがって、あるモードプロファイルとそれに対応する周波数は、あるスケールでのモードプロファイルとそれに対応する周波数を再スケーリングすることで得られる
+
 \end{document}
