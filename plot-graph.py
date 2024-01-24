@@ -7,10 +7,10 @@ import freq_data_process
 # filename = input('Enter the filename: ')
 structure = "woodpile"
 files = [
-    [f'datas/{structure}/gaps.e-5.dat', 'epsilon = 5', "#333333"],
-    [f'datas/{structure}/gaps.e-10.dat', 'epsilon = 10', "#FF4B00"],
-    [f'datas/{structure}/gaps.e-13.dat', 'epsilon = 13', "#005AFF"],
-    [f'datas/{structure}/gaps.e-15.dat', 'epsilon = 15', "#03AF7A"],
+    [f'datas/{structure}/2.gaps.e-5.dat', 'epsilon = 5', "#333333"],
+    [f'datas/{structure}/2.gaps.e-10.dat', 'epsilon = 10', "#FF4B00"],
+    [f'datas/{structure}/2.gaps.e-13.dat', 'epsilon = 13', "#005AFF"],
+    [f'datas/{structure}/2.gaps.e-15.dat', 'epsilon = 15', "#03AF7A"],
 ]
 
 fig, ax = plt.subplots()

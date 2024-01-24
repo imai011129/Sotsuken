@@ -2,127 +2,13 @@ import matplotlib.pyplot as plt
 import freq_data_process
 
 # 与えられたデータ
-colors = ["blue", "orange", "green", "red"]
-d = """ 
- This is Gap Checker. Radius is 0 
- This is Gap Checker. Radius is 0.01 
- This is Gap Checker. Radius is 0.02 
- This is Gap Checker. Radius is 0.03 
- This is Gap Checker. Radius is 0.04 
- This is Gap Checker. Radius is 0.05 
- This is Gap Checker. Radius is 0.060000000000000005 
- This is Gap Checker. Radius is 0.07 
- This is Gap Checker. Radius is 0.08 
- This is Gap Checker. Radius is 0.09 
- This is Gap Checker. Radius is 0.09999999999999999 
- This is Gap Checker. Radius is 0.10999999999999999 
- This is Gap Checker. Radius is 0.11999999999999998 
- This is Gap Checker. Radius is 0.12999999999999998 
- This is Gap Checker. Radius is 0.13999999999999999 
- This is Gap Checker. Radius is 0.15 
- This is Gap Checker. Radius is 0.16 
- This is Gap Checker. Radius is 0.17 
- This is Gap Checker. Radius is 0.18000000000000002 
- This is Gap Checker. Radius is 0.19000000000000003 
-Gap from band 2 (0.34680403549449323) to band 3 (0.3571356679592808), 2.935374269727075%
- This is Gap Checker. Radius is 0.20000000000000004 
-Gap from band 2 (0.3559458833942552) to band 3 (0.3813749084425419), 6.897682889136622%
- This is Gap Checker. Radius is 0.21000000000000005 
-Gap from band 2 (0.364054326862079) to band 3 (0.4030768303500228), 10.173619757476379%
- This is Gap Checker. Radius is 0.22000000000000006 
-Gap from band 2 (0.3726145967763554) to band 3 (0.4250978537374335), 13.15843996850614%
- This is Gap Checker. Radius is 0.23000000000000007 
-Gap from band 2 (0.3819442396960091) to band 3 (0.44789686245226096), 15.895241290294129%
- This is Gap Checker. Radius is 0.24000000000000007 
-Gap from band 2 (0.39235166928425325) to band 3 (0.4719530111821367), 18.419741023484804%
- This is Gap Checker. Radius is 0.25000000000000006 
-Gap from band 2 (0.40414670420462884) to band 3 (0.4974088181469782), 20.68915593774758%
- This is Gap Checker. Radius is 0.26000000000000006 
-Gap from band 2 (0.41776263857681667) to band 3 (0.524154627544927), 22.59051676718263%
- This is Gap Checker. Radius is 0.2700000000000001 
-Gap from band 2 (0.43372860547104075) to band 3 (0.55259936442927), 24.103698280044455%
- This is Gap Checker. Radius is 0.2800000000000001 
-Gap from band 2 (0.4526173413476787) to band 3 (0.582404731134025), 25.079154007827317%
- This is Gap Checker. Radius is 0.2900000000000001 
-Gap from band 2 (0.4754338012900114) to band 3 (0.6131312185602968), 25.29888702270088%
- This is Gap Checker. Radius is 0.3000000000000001 
-Gap from band 2 (0.5040865169661067) to band 3 (0.6448872208602181), 24.508950772101002%
- This is Gap Checker. Radius is 0.3100000000000001 
-Gap from band 2 (0.541331362134255) to band 3 (0.6773175686953139), 22.317535940147945%
- This is Gap Checker. Radius is 0.3200000000000001 
-Gap from band 2 (0.5928082523267241) to band 3 (0.7107063953613356), 18.089270150315244%
- This is Gap Checker. Radius is 0.3300000000000001 
-Gap from band 2 (0.6707833560617501) to band 3 (0.745228315695144), 10.514738136448763%
- This is Gap Checker. Radius is 0.34000000000000014 
- This is Gap Checker. Radius is 0.35000000000000014 
- This is Gap Checker. Radius is 0.36000000000000015 
- This is Gap Checker. Radius is 0.37000000000000016 
- This is Gap Checker. Radius is 0.38000000000000017 
- This is Gap Checker. Radius is 0.3900000000000002 
- This is Gap Checker. Radius is 0.4000000000000002 
- This is Gap Checker. Radius is 0.4100000000000002 
- This is Gap Checker. Radius is 0.4200000000000002 
- This is Gap Checker. Radius is 0.4300000000000002 
- This is Gap Checker. Radius is 0.4400000000000002 
- This is Gap Checker. Radius is 0.45000000000000023 
- This is Gap Checker. Radius is 0.46000000000000024 
- This is Gap Checker. Radius is 0.47000000000000025 
- This is Gap Checker. Radius is 0.48000000000000026 
- This is Gap Checker. Radius is 0.49000000000000027 
- This is Gap Checker. Radius is 0.5000000000000002 
- This is Gap Checker. Radius is 0.5100000000000002 
- This is Gap Checker. Radius is 0.5200000000000002 
- This is Gap Checker. Radius is 0.5300000000000002 
- This is Gap Checker. Radius is 0.5400000000000003 
- This is Gap Checker. Radius is 0.5500000000000003 
- This is Gap Checker. Radius is 0.5600000000000003 
- This is Gap Checker. Radius is 0.5700000000000003 
- This is Gap Checker. Radius is 0.5800000000000003 
- This is Gap Checker. Radius is 0.5900000000000003 
- This is Gap Checker. Radius is 0.6000000000000003 
- This is Gap Checker. Radius is 0.6100000000000003 
- This is Gap Checker. Radius is 0.6200000000000003 
- This is Gap Checker. Radius is 0.6300000000000003 
- This is Gap Checker. Radius is 0.6400000000000003 
- This is Gap Checker. Radius is 0.6500000000000004 
- This is Gap Checker. Radius is 0.6600000000000004 
- This is Gap Checker. Radius is 0.6700000000000004 
- This is Gap Checker. Radius is 0.6800000000000004 
- This is Gap Checker. Radius is 0.6900000000000004 
- This is Gap Checker. Radius is 0.7000000000000004 
- This is Gap Checker. Radius is 0.7100000000000004 
- This is Gap Checker. Radius is 0.7200000000000004 
- This is Gap Checker. Radius is 0.7300000000000004 
- This is Gap Checker. Radius is 0.7400000000000004 
- This is Gap Checker. Radius is 0.7500000000000004 
- This is Gap Checker. Radius is 0.7600000000000005 
- This is Gap Checker. Radius is 0.7700000000000005 
- This is Gap Checker. Radius is 0.7800000000000005 
- This is Gap Checker. Radius is 0.7900000000000005 
- This is Gap Checker. Radius is 0.8000000000000005 
- This is Gap Checker. Radius is 0.8100000000000005 
- This is Gap Checker. Radius is 0.8200000000000005 
- This is Gap Checker. Radius is 0.8300000000000005 
- This is Gap Checker. Radius is 0.8400000000000005 
- This is Gap Checker. Radius is 0.8500000000000005 
- This is Gap Checker. Radius is 0.8600000000000005 
- This is Gap Checker. Radius is 0.8700000000000006 
- This is Gap Checker. Radius is 0.8800000000000006 
- This is Gap Checker. Radius is 0.8900000000000006 
- This is Gap Checker. Radius is 0.9000000000000006 
- This is Gap Checker. Radius is 0.9100000000000006 
- This is Gap Checker. Radius is 0.9200000000000006 
- This is Gap Checker. Radius is 0.9300000000000006 
- This is Gap Checker. Radius is 0.9400000000000006 
- This is Gap Checker. Radius is 0.9500000000000006 
- This is Gap Checker. Radius is 0.9600000000000006 
- This is Gap Checker. Radius is 0.9700000000000006 
- This is Gap Checker. Radius is 0.9800000000000006 
- This is Gap Checker. Radius is 0.9900000000000007 
-
-"""
-
-datas = freq_data_process.process_data(d)
+# filename = input('Enter the filename: ')
+structure = "woodpile"
+file = 'datas/woodpile/2.gaps.e-15.dat'
+f = open(file, 'r')
+content = f.read()
+f.close()
+datas = freq_data_process.process_data(content)
 plt.figure()
 # r.append("Radius,Frequency-min,Frequency-max,Frequency-min,Frequency-max")
 
@@ -155,7 +41,7 @@ for data in datas:
     plt.fill_between(x, y1, y2, color='#555555', where=where_condition_1)
     plt.fill_between(x, y3, y4, color='#555555', where=where_condition_2)
     # plt.fill_between(x, y5, y6, color='#555555', where=where_condition_3)
-plt.xlabel('Radius $r / a$', fontname='Times New Roman', fontsize=14)
+plt.xlabel('Width $w / a$', fontname='Times New Roman', fontsize=14)
 plt.ylabel('Frequency $\omega a / 2 \pi c$',
            fontname='Times New Roman', fontsize=14)
 # plt.legend()
