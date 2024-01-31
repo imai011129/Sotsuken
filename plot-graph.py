@@ -5,14 +5,19 @@ import matplotlib.pyplot as plt
 import freq_data_process
 
 # filename = input('Enter the filename: ')
-structure = "woodpile"
+# structure = "woodpile"
+# files = [
+#     [f'datas/{structure}/2.gaps.e-5.dat', 'epsilon = 5', "#333333"],
+#     [f'datas/{structure}/2.gaps.e-10.dat', 'epsilon = 10', "#FF4B00"],
+#     [f'datas/{structure}/2.gaps.e-13.dat', 'epsilon = 13', "#005AFF"],
+#     [f'datas/{structure}/2.gaps.e-15.dat', 'epsilon = 15', "#03AF7A"],
+# ]
 files = [
-    [f'datas/{structure}/2.gaps.e-5.dat', 'epsilon = 5', "#333333"],
-    [f'datas/{structure}/2.gaps.e-10.dat', 'epsilon = 10', "#FF4B00"],
-    [f'datas/{structure}/2.gaps.e-13.dat', 'epsilon = 13', "#005AFF"],
-    [f'datas/{structure}/2.gaps.e-15.dat', 'epsilon = 15', "#03AF7A"],
-]
-
+    ['datas/inv_opals/gaps.detail.e-10.dat', 'epsilon = 10', "#FF4B00"],
+    ['datas/inv_opals/gaps.detail.e-13.dat', 'epsilon = 13', "#005AFF"],
+    ['datas/inv_opals/gaps.detail.e-15.dat', 'epsilon = 15', "#03AF7A"]
+    ]
+# files = [['datas/inv_opals/gaps.detail_1.dat', 'epsilon = 10', "#333333"]]
 fig, ax = plt.subplots()
 for file in files:
     f = open(file[0], 'r')
