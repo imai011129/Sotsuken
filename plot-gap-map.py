@@ -4,7 +4,7 @@ import freq_data_process
 # 与えられたデータ
 # filename = input('Enter the filename: ')
 structure = "woodpile"
-file = 'datas/woodpile/2.gaps.e-15.dat'
+file = 'datas/inv_opals/gaps.detail.e-13.dat'
 f = open(file, 'r')
 content = f.read()
 f.close()

@@ -45,7 +45,7 @@ for file in files:
             gap_midgap_ratio.append(100 * (gap_max[i] - gap_min[i]) / ((gap_max[i] + gap_min[i]) / 2))
 
     # グラフのプロット
-    ax.plot(widths, gap_midgap_ratio, label=file[1], marker='o', markersize=4, color=file[2])
+    ax.plot(widths, gap_midgap_ratio, label=file[1], marker='o', markersize=1, color=file[2])
 
 
 plt.xlabel('Radius $r / a$')
